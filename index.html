@@ -265,16 +265,43 @@
             </div>
             <div class="row pb-3">
                 <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-laptop service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Video Editor</h4>
-                    </div>
-                    <p>
-    I have been a <strong>video editor</strong> since 9th grade, editing YouTube videos, <strong>birthday edits</strong>, and more. Over the years, I've developed my skills using various tools, including <strong>AI-based video creation</strong>. My passion for video editing has led me to create unique and engaging content. Check out some of my work on my <a href="https://www.youtube.com/@btnks99999" target="_blank"><strong>YouTube channel</strong></a>, where you can view the <strong>videos I’ve edited</strong> and get a glimpse of my editing journey!
-</p>
+    <div class="d-flex align-items-center justify-content-center mb-4">
+        <i class="fa fa-2x fa-laptop service-icon bg-primary text-white mr-3"></i>
+        <h4 class="font-weight-bold m-0">Video Editor</h4>
+    </div>
+    <div class="short-text" style="text-align: justify;">
+        I have been a <strong>video editor</strong> since 9th grade, editing YouTube videos, <strong>birthday edits</strong>, and more.
+    </div>
+    <div class="full-text" style="display: none; text-align: justify;">
+        I have been a <strong>video editor</strong> since 9th grade, editing YouTube videos, <strong>birthday edits</strong>, and more. Over the years, I've developed my skills using various tools, including <strong>AI-based video creation</strong>. My passion for video editing has led me to create unique and engaging content. Check out some of my work on my <a href="https://www.youtube.com/@btnks99999" target="_blank"><strong>YouTube channel</strong></a>, where you can view the <strong>videos I've edited</strong> and get a glimpse of my editing journey!
+    </div>
+    <a class="border-bottom border-primary text-decoration-none read-more-link" href="javascript:void(0);">Read More</a>
+</div>
 
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
-                </div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const readMoreLinks = document.querySelectorAll('.read-more-link');
+    
+    readMoreLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const parent = this.parentElement;
+            const shortText = parent.querySelector('.short-text');
+            const fullText = parent.querySelector('.full-text');
+            
+            if (fullText.style.display === 'none') {
+                shortText.style.display = 'none';
+                fullText.style.display = 'block';
+                this.textContent = 'Read Less';
+            } else {
+                shortText.style.display = 'block';
+                fullText.style.display = 'none';
+                this.textContent = 'Read More';
+            }
+        });
+    });
+});
+</script>
                 <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
                         <i class="fa fa-2x fa-laptop-code service-icon bg-primary text-white mr-3"></i>
