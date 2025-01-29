@@ -412,6 +412,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
             <!-- Portfolio Section -->
+<!-- Portfolio Section -->
 <div class="container-fluid pt-5" id="portfolio">
     <div class="container">
         <div class="position-relative d-flex align-items-center justify-content-center">
@@ -425,9 +426,10 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
                 <div class="position-relative overflow-hidden mb-2">
                     <img class="img-fluid rounded w-100" src="img/portfolio-1.jpg" alt="Project 1">
-                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center flex-column">
                         <a href="#" data-toggle="modal" data-target="#portfolioModal1">
-                            <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            <i class="fa fa-plus text-white mb-2" style="font-size: 40px;"></i>
+                            <p class="text-white m-0">Click Here</p>
                         </a>
                     </div>
                 </div>
@@ -437,9 +439,10 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
                 <div class="position-relative overflow-hidden mb-2">
                     <img class="img-fluid rounded w-100" src="img/portfolio-2.jpg" alt="Project 2">
-                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center flex-column">
                         <a href="#" data-toggle="modal" data-target="#portfolioModal2">
-                            <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            <i class="fa fa-plus text-white mb-2" style="font-size: 40px;"></i>
+                            <p class="text-white m-0">Click Here</p>
                         </a>
                     </div>
                 </div>
@@ -526,7 +529,6 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
 </div>
 
-<!-- Add this in your head section -->
 <style>
     .portfolio-container {
         transition: .5s;
@@ -546,6 +548,7 @@ document.addEventListener('DOMContentLoaded', function() {
         background: rgba(0, 0, 0, 0.7);
         opacity: 0;
         transition: 0.5s;
+        cursor: pointer;
     }
 
     .portfolio-btn:hover {
@@ -555,6 +558,13 @@ document.addEventListener('DOMContentLoaded', function() {
     .portfolio-btn a {
         color: #ffffff;
         text-decoration: none;
+        text-align: center;
+    }
+
+    .portfolio-btn p {
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 8px;
     }
 
     .modal-body img {
@@ -570,9 +580,23 @@ document.addEventListener('DOMContentLoaded', function() {
         transform: scale(1.05);
         transition: transform 0.3s ease;
     }
+
+    /* Animation for icon and text */
+    .portfolio-btn:hover i,
+    .portfolio-btn:hover p {
+        animation: bounce 0.5s;
+    }
+
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-5px);
+        }
+    }
 </style>
 
-<!-- Add this before closing body tag -->
 <script>
     $(document).ready(function() {
         // Initialize portfolio items
