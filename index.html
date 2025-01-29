@@ -409,8 +409,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <ul class="list-inline mb-4" id="portfolio-flters">
                         <li class="btn btn-sm btn-outline-primary m-1 active"  data-filter="*">All</li>
                         <li class="btn btn-sm btn-outline-primary m-1" data-filter=".first">Coding</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".second">Group Assignments</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".third">Resesrch Paper</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".second">Group Projects</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".third">Resesrch Projects</li>
                         <li class="btn btn-sm btn-outline-primary m-1" data-filter=".fourth">gcbksjc</li>
                     </ul>
                 </div>
@@ -421,7 +421,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="container">
         <div class="position-relative d-flex align-items-center justify-content-center">
             <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Gallery</h1>
-            <h1 class="position-absolute text-uppercase text-primary">My Portfolio</h1>
+            <h1 class="position-absolute text-uppercase text-primary">My Projects</h1>
         </div>
         
         <!-- Portfolio Items Container -->
@@ -429,7 +429,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <!-- Portfolio Item 1 -->
             <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
                 <div class="position-relative overflow-hidden mb-2">
-                    <img class="img-fluid rounded w-100" src="img/portfolio-1.jpg" alt="Project 1">
+                    <img class="img-fluid rounded w-100" src="img/Screenshot 2025-01-29 234222.png" alt="Project 1">
                     <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center flex-column">
                         <a href="#" data-toggle="modal" data-target="#portfolioModal1">
                             <i class="fa fa-plus text-white mb-2" style="font-size: 40px;"></i>
@@ -442,7 +442,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <!-- Portfolio Item 2 -->
             <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
                 <div class="position-relative overflow-hidden mb-2">
-                    <img class="img-fluid rounded w-100" src="img/portfolio-2.jpg" alt="Project 2">
+                    <img class="img-fluid rounded w-100" src="img/Screenshot 2025-01-30 044451.png" alt="Project 2">
                     <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center flex-column">
                         <a href="#" data-toggle="modal" data-target="#portfolioModal2">
                             <i class="fa fa-plus text-white mb-2" style="font-size: 40px;"></i>
@@ -461,30 +461,36 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="portfolioModalLabel1">Research Paper</h5>
+                <h5 class="modal-title" id="portfolioModalLabel1">Sleep Calculator</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <!-- Project Image -->
-                <img class="img-fluid rounded mb-4" src="img/portfolio-1.jpg" alt="Research Paper">
+                <img class="img-fluid rounded mb-4" src="img/portfolio-1.jpg" alt="Sleep calculator">
                 
                 <!-- Project Description -->
                 <div class="mb-4">
                     <h6 class="text-primary">Project Overview</h6>
                     <p align="justify">
-                        This research paper focuses on the implementation of machine learning algorithms
-                        in predictive analytics. The study explores various methodologies and their
-                        practical applications in real-world scenarios.
+                       This Sleep Time Calculator is a web-based tool that helps users determine the best times to go to bed in order to wake up feeling refreshed. The tool calculates sleep times based on a user's desired wake-up time, considering the sleep cycle duration of 90 minutes. It provides multiple sleep time options, ranging from 1 to 6 complete sleep cycles, to ensure users can align their sleep schedule with optimal rest periods.
+
+<b>Features:</b>
+1. User Input: Users enter their wake-up time in a 24-hour format.
+2. Sleep Cycle Calculation: The tool calculates sleep times based on 90-minute cycles.
+3. Multiple Sleep Options: It provides suggestions for when to fall asleep to complete a full sleep cycle before waking up.
+4. Output Display: The results are shown in a list format for easy understanding, offering users different sleep time options.
+
+The design is user-friendly, with a modern, clean interface featuring dark-themed colors and easy-to-read typography. The tool is meant to assist users in improving their sleep habits by calculating the best sleep times to optimize their rest.
                     </p>
                 </div>
 
                 <!-- PDF Download Section -->
                 <div class="text-center">
-                    <h6 class="text-primary mb-3">Download Research Paper</h6>
-                    <a href="path/to/research-paper.pdf" class="btn btn-primary" download>
-                        <i class="fa fa-download mr-2"></i>Download PDF
+                    <h6 class="text-primary mb-3">Download the sleep calculator</h6>
+                    <a href="img/sleep_calculator.html" class="btn btn-primary" download>
+                        <i class="fa fa-download mr-2"></i>Download 
                     </a>
                 </div>
             </div>
@@ -500,28 +506,27 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="portfolioModalLabel2">Project Documentation</h5>
+                <h5 class="modal-title" id="portfolioModalLabel2">Project Safar</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <!-- Project Image -->
-                <img class="img-fluid rounded mb-4" src="img/portfolio-2.jpg" alt="Project Documentation">
+                <img class="img-fluid rounded mb-4" src="img/Screenshot 2025-01-30 044451.png" alt="Project Safar">
                 
                 <!-- Project Description -->
                 <div class="mb-4">
                     <h6 class="text-primary">Project Details</h6>
                     <p align="justify">
-                        Comprehensive documentation of our web development project, including
-                        technical specifications, user stories, and implementation details.
+                   This project is an advertising campaign for an idea we developed: "Safar," a women-driven cab service designed to ensure safer transportation for female passengers. The campaign was part of our advertising class, where we researched the challenges women face with public transportation. Based on our findings, we focused on addressing the demand for additional safety features such as GPS tracking and emergency buttons. The goal of this project was to create an ad concept that would effectively communicate the need for safer transportation options for women.
                     </p>
                 </div>
 
                 <!-- PDF Download Section -->
                 <div class="text-center">
-                    <h6 class="text-primary mb-3">Download Documentation</h6>
-                    <a href="path/to/project-doc.pdf" class="btn btn-primary" download>
+                    <h6 class="text-primary mb-3">Download the project</h6>
+                    <a href="img/Safar Final PPT.pdf" class="btn btn-primary" download>
                         <i class="fa fa-download mr-2"></i>Download PDF
                     </a>
                 </div>
