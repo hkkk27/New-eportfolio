@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Time Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a2e;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background: #162447;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px 30px;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #f0a500;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 18px;
+            color: #e0e0e0;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 15px 0;
+            border: 2px solid #f0a500;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #f0a500;
+            color: #1a1a2e;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e09d00;
+        }
+
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #1f4068;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #e0e0e0;
+            text-align: left;
+        }
+
+        .output p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sleep Time Calculator</h1>
+        <label for="wake-up-time">Enter your wake-up time (24-hour format):</label>
+        <input type="time" id="wake-up-time" required>
+        <button onclick="calculateSleepTimes()">Calculate Sleep Times</button>
+
+        <div class="output" id="output"></div>
+    </div>
+
+    <script>
+        function calculateSleepTimes() {
+            const wakeUpTimeInput = document.getElementById("wake-up-time").value;
+            const outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = ""; // Clear previous output
+
+            if (!wakeUpTimeInput) {
+                outputDiv.innerHTML = "<p>Please enter a valid wake-up time.</p>";
+                return;
+            }
+
+            const wakeUpTime = new Date(`1970-01-01T${wakeUpTimeInput}:00`);
+            const sleepCycleMinutes = 90;
+            const maxCycles = 6;
+            const sleepTimes = [];
+
+            for (let cycle = 1; cycle <= maxCycles; cycle++) {
+                const sleepTime = new Date(wakeUpTime - sleepCycleMinutes * cycle * 60000);
+                const hours = sleepTime.getHours().toString().padStart(2, '0');
+                const minutes = sleepTime.getMinutes().toString().padStart(2, '0');
+                sleepTimes.push(`${hours}:${minutes}`);
+            }
+
+            outputDiv.innerHTML = "<p>To wake up refreshed, you should fall asleep at one of these times:</p>";
+            sleepTimes.forEach(time => {
+                outputDiv.innerHTML += `<p>- ${time}</p>`;
+            });
+        }
+    </script>
+</body>
+</html>
