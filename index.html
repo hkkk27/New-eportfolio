@@ -22,8 +22,15 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
-    <!-- Customized Bootstrap Styleseet -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
@@ -399,22 +406,193 @@ document.addEventListener('DOMContentLoaded', function() {
                         <li class="btn btn-sm btn-outline-primary m-1 active"  data-filter="*">All</li>
                         <li class="btn btn-sm btn-outline-primary m-1" data-filter=".first">Coding</li>
                         <li class="btn btn-sm btn-outline-primary m-1" data-filter=".second">Group Assignments</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".third">Resesrch Paper/li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".fourth">gcbksjc/li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".third">Resesrch Paper</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".fourth">gcbksjc</li>
                     </ul>
                 </div>
             </div>
-            <div class="row portfolio-container">
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/portfolio-1.jpg" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-1.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
+            <!-- Portfolio Section -->
+<div class="container-fluid pt-5" id="portfolio">
+    <div class="container">
+        <div class="position-relative d-flex align-items-center justify-content-center">
+            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Gallery</h1>
+            <h1 class="position-absolute text-uppercase text-primary">My Portfolio</h1>
+        </div>
+        
+        <!-- Portfolio Items Container -->
+        <div class="row portfolio-container">
+            <!-- Portfolio Item 1 -->
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                <div class="position-relative overflow-hidden mb-2">
+                    <img class="img-fluid rounded w-100" src="img/portfolio-1.jpg" alt="Project 1">
+                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                        <a href="#" data-toggle="modal" data-target="#portfolioModal1">
+                            <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                        </a>
                     </div>
                 </div>
+            </div>
+
+            <!-- Portfolio Item 2 -->
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                <div class="position-relative overflow-hidden mb-2">
+                    <img class="img-fluid rounded w-100" src="img/portfolio-2.jpg" alt="Project 2">
+                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                        <a href="#" data-toggle="modal" data-target="#portfolioModal2">
+                            <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Portfolio Modals -->
+<!-- Modal 1 -->
+<div class="modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="portfolioModalLabel1">Research Paper</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Project Image -->
+                <img class="img-fluid rounded mb-4" src="img/portfolio-1.jpg" alt="Research Paper">
+                
+                <!-- Project Description -->
+                <div class="mb-4">
+                    <h6 class="text-primary">Project Overview</h6>
+                    <p align="justify">
+                        This research paper focuses on the implementation of machine learning algorithms
+                        in predictive analytics. The study explores various methodologies and their
+                        practical applications in real-world scenarios.
+                    </p>
+                </div>
+
+                <!-- PDF Download Section -->
+                <div class="text-center">
+                    <h6 class="text-primary mb-3">Download Research Paper</h6>
+                    <a href="path/to/research-paper.pdf" class="btn btn-primary" download>
+                        <i class="fa fa-download mr-2"></i>Download PDF
+                    </a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 2 -->
+<div class="modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModalLabel2" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="portfolioModalLabel2">Project Documentation</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Project Image -->
+                <img class="img-fluid rounded mb-4" src="img/portfolio-2.jpg" alt="Project Documentation">
+                
+                <!-- Project Description -->
+                <div class="mb-4">
+                    <h6 class="text-primary">Project Details</h6>
+                    <p align="justify">
+                        Comprehensive documentation of our web development project, including
+                        technical specifications, user stories, and implementation details.
+                    </p>
+                </div>
+
+                <!-- PDF Download Section -->
+                <div class="text-center">
+                    <h6 class="text-primary mb-3">Download Documentation</h6>
+                    <a href="path/to/project-doc.pdf" class="btn btn-primary" download>
+                        <i class="fa fa-download mr-2"></i>Download PDF
+                    </a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add this in your head section -->
+<style>
+    .portfolio-container {
+        transition: .5s;
+        margin: 0 -15px;
+    }
+
+    .portfolio-item {
+        padding: 0 15px;
+    }
+
+    .portfolio-btn {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.7);
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    .portfolio-btn:hover {
+        opacity: 1;
+    }
+
+    .portfolio-btn a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .modal-body img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .modal-body p {
+        line-height: 1.8;
+    }
+
+    .btn-primary:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+    }
+</style>
+
+<!-- Add this before closing body tag -->
+<script>
+    $(document).ready(function() {
+        // Initialize portfolio items
+        $('.portfolio-btn a').click(function(e) {
+            e.preventDefault();
+            $($(this).data('target')).modal('show');
+        });
+
+        // Add smooth transition for modal
+        $('.modal').on('show.bs.modal', function () {
+            $(this).fadeIn();
+        });
+
+        // Add hover effect for download button
+        $('.btn-primary').hover(
+            function() { $(this).addClass('shadow'); },
+            function() { $(this).removeClass('shadow'); }
+        );
+    });
+</script>
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
                     <div class="position-relative overflow-hidden mb-2">
                         <img class="img-fluid rounded w-100" src="img/portfolio-2.jpg" alt="">
