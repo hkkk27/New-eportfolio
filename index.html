@@ -396,25 +396,23 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Services End -->
 
 
-    <!-- Portfolio Start -->
-    <div class="container-fluid pt-5 pb-3" id="portfolio">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Gallery</h1>
-                <h1 class="position-absolute text-uppercase text-primary">My Projects</h1>
+   <!-- Portfolio Start -->
+<div class="container-fluid pt-5 pb-3" id="portfolio">
+    <div class="container">
+        <div class="position-relative d-flex align-items-center justify-content-center">
+            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Gallery</h1>
+            <h1 class="position-absolute text-uppercase text-primary">My Projects</h1>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center mb-2">
+                <ul class="list-inline mb-4" id="portfolio-flters">
+                    <li class="btn btn-sm btn-outline-primary m-1 active" data-filter="*">All</li>
+                    <li class="btn btn-sm btn-outline-primary m-1" data-filter=".first">Coding</li>
+                    <li class="btn btn-sm btn-outline-primary m-1" data-filter=".second">Group Projects</li>
+                    <li class="btn btn-sm btn-outline-primary m-1" data-filter=".third">Research Projects</li>
+                </ul>
             </div>
-            <div class="row">
-                <div class="col-12 text-center mb-2">
-                    <ul class="list-inline mb-4" id="portfolio-flters">
-                        <li class="btn btn-sm btn-outline-primary m-1 active"  data-filter="*">All</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".first">Coding</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".second">Group Projects</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".third">Resesrch Projects</li>
-                    </ul>
-                </div>
-            </div>
-            <!-- Portfolio Section -->
-
+        </div>
         
         <!-- Portfolio Items Container -->
         <div class="row portfolio-container">
@@ -443,11 +441,37 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </div>
             </div>
+
+            <!-- Portfolio Item 3 -->
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+                <div class="position-relative overflow-hidden mb-2">
+                    <img class="img-fluid rounded w-100" src="img/researchphoto.jpg" alt="Project 3">
+                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center flex-column">
+                        <a href="#" data-toggle="modal" data-target="#portfolioModal3">
+                            <i class="fa fa-plus text-white mb-2" style="font-size: 40px;"></i>
+                            <p class="text-white m-0">Click Here</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 4 -->
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                <div class="position-relative overflow-hidden mb-2">
+                    <img class="img-fluid rounded w-100" src="img/Screenshot 2025-01-30 051130.png" alt="Project 4">
+                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center flex-column">
+                        <a href="#" data-toggle="modal" data-target="#portfolioModal4">
+                            <i class="fa fa-plus text-white mb-2" style="font-size: 40px;"></i>
+                            <p class="text-white m-0">Click Here</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-<!-- Portfolio Modals -->
+<!-- Modals -->
 <!-- Modal 1 -->
 <div class="modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModalLabel1" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
@@ -459,30 +483,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 </button>
             </div>
             <div class="modal-body">
-                <!-- Project Image -->
                 <img class="img-fluid rounded mb-4" src="img/Screenshot 2025-01-29 234222.png" alt="Sleep calculator">
-                
-                <!-- Project Description -->
                 <div class="mb-4">
                     <h6 class="text-primary">Project Overview</h6>
                     <p align="justify">
-                       This Sleep Time Calculator is a web-based tool that helps users determine the best times to go to bed in order to wake up feeling refreshed. The tool calculates sleep times based on a user's desired wake-up time, considering the sleep cycle duration of 90 minutes. It provides multiple sleep time options, ranging from 1 to 6 complete sleep cycles, to ensure users can align their sleep schedule with optimal rest periods.</p>
-
-<p></p><b>Features:</b>
-1. User Input: Users enter their wake-up time in a 24-hour format.
-2. Sleep Cycle Calculation: The tool calculates sleep times based on 90-minute cycles.
-3. Multiple Sleep Options: It provides suggestions for when to fall asleep to complete a full sleep cycle before waking up.
-4. Output Display: The results are shown in a list format for easy understanding, offering users different sleep time options.</p>
-
-<p>The design is user-friendly, with a modern, clean interface featuring dark-themed colors and easy-to-read typography. The tool is meant to assist users in improving their sleep habits by calculating the best sleep times to optimize their rest.
-                    </p>
+                        This Sleep Time Calculator is a web-based tool that helps users determine the best times to go to bed in order to wake up feeling refreshed. The tool calculates sleep times based on a user's desired wake-up time, considering the sleep cycle duration of 90 minutes. It provides multiple sleep time options, ranging from 1 to 6 complete sleep cycles, to ensure users can align their sleep schedule with optimal rest periods.</p>
+                    <p><b>Features:</b><br>
+                        1. User Input: Users enter their wake-up time in a 24-hour format.<br>
+                        2. Sleep Cycle Calculation: The tool calculates sleep times based on 90-minute cycles.<br>
+                        3. Multiple Sleep Options: It provides suggestions for when to fall asleep to complete a full sleep cycle before waking up.<br>
+                        4. Output Display: The results are shown in a list format for easy understanding, offering users different sleep time options.</p>
+                    <p>The design is user-friendly, with a modern, clean interface featuring dark-themed colors and easy-to-read typography. The tool is meant to assist users in improving their sleep habits by calculating the best sleep times to optimize their rest.</p>
                 </div>
-
-                <!-- PDF Download Section -->
                 <div class="text-center">
                     <h6 class="text-primary mb-3">Download the sleep calculator</h6>
                     <a href="img/sleep_calculator.html" class="btn btn-primary" download>
-                        <i class="fa fa-download mr-2"></i>Download 
+                        <i class="fa fa-download mr-2"></i>Download
                     </a>
                 </div>
             </div>
@@ -504,18 +520,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 </button>
             </div>
             <div class="modal-body">
-                <!-- Project Image -->
                 <img class="img-fluid rounded mb-4" src="img/Screenshot 2025-01-30 044451.png" alt="Project Safar">
-                
-                <!-- Project Description -->
                 <div class="mb-4">
                     <h6 class="text-primary">Project Details</h6>
                     <p align="justify">
-                   This project is an advertising campaign for an idea we developed: "Safar," a women-driven cab service designed to ensure safer transportation for female passengers. The campaign was part of our advertising class, where we researched the challenges women face with public transportation. Based on our findings, we focused on addressing the demand for additional safety features such as GPS tracking and emergency buttons. The goal of this project was to create an ad concept that would effectively communicate the need for safer transportation options for women.
+                        This project is an advertising campaign for an idea we developed: "Safar," a women-driven cab service designed to ensure safer transportation for female passengers. The campaign was part of our advertising class, where we researched the challenges women face with public transportation. Based on our findings, we focused on addressing the demand for additional safety features such as GPS tracking and emergency buttons. The goal of this project was to create an ad concept that would effectively communicate the need for safer transportation options for women.
                     </p>
                 </div>
-
-                <!-- PDF Download Section -->
                 <div class="text-center">
                     <h6 class="text-primary mb-3">Download the project</h6>
                     <a href="img/Safar Final PPT.pdf" class="btn btn-primary" download>
@@ -529,59 +540,26 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </div>
 </div>
-    <!-- Portfolio Item 3 -->
-<div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
-    <div class="position-relative overflow-hidden mb-2">
-        <img class="img-fluid rounded w-100" src="img/researchphoto.jpg" alt="Project 3">
-        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center flex-column">
-            <a href="#" data-toggle="modal" data-target="#portfolioModal3">
-                <i class="fa fa-plus text-white mb-2" style="font-size: 40px;"></i>
-                <p class="text-white m-0">Click Here</p>
-            </a>
-        </div>
-    </div>
-</div>
-
-<!-- Portfolio Item 4 -->
-<div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-    <div class="position-relative overflow-hidden mb-2">
-        <img class="img-fluid rounded w-100" src="img/Screenshot 2025-01-30 051130.png" alt="Project 4">
-        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center flex-column">
-            <a href="#" data-toggle="modal" data-target="#portfolioModal4">
-                <i class="fa fa-plus text-white mb-2" style="font-size: 40px;"></i>
-                <p class="text-white m-0">Click Here</p>
-            </a>
-        </div>
-    </div>
-</div>
-
-<!-- Add these modal sections after your existing modals -->
 
 <!-- Modal 3 -->
 <div class="modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModalLabel3" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="portfolioModalLabel3">Research Essay </h5>
+                <h5 class="modal-title" id="portfolioModalLabel3">Research Essay</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <!-- Project Image -->
                 <img class="img-fluid rounded mb-4" src="img/researchphoto.jpg" alt="Research Project">
-                
-                <!-- Project Description -->
                 <div class="mb-4">
                     <h6 class="text-primary">Project Overview</h6>
                     <p align="justify">
-                        <b></b>Research on Data Collection and Its Impact on Freedom of Thought</b> </p>
-
-<p>I conducted research exploring how data collection in today's digital age impacts individual autonomy and reinforces societal biases. The study examined how personal data is used by corporations to predict and influence consumer behavior, as well as its effects on political decision-making. By analyzing the role of algorithms, AI, and neuromarketing, my research highlighted the growing risks posed by unchecked data collection, including the reinforcement of existing inequalities and the creation of echo chambers. This project aims to raise awareness about the ethical concerns surrounding data use and the importance of regulating it.
+                        <b>Research on Data Collection and Its Impact on Freedom of Thought</b>
                     </p>
+                    <p>I conducted research exploring how data collection in today's digital age impacts individual autonomy and reinforces societal biases. The study examined how personal data is used by corporations to predict and influence consumer behavior, as well as its effects on political decision-making. By analyzing the role of algorithms, AI, and neuromarketing, my research highlighted the growing risks posed by unchecked data collection, including the reinforcement of existing inequalities and the creation of echo chambers. This project aims to raise awareness about the ethical concerns surrounding data use and the importance of regulating it.</p>
                 </div>
-
-                <!-- PDF Download Section -->
                 <div class="text-center">
                     <h6 class="text-primary mb-3">Download Research Paper</h6>
                     <a href="img/Harshit Singh-final research paper (1).pdf" class="btn btn-primary" download>
@@ -607,35 +585,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 </button>
             </div>
             <div class="modal-body">
-                <!-- Project Image -->
                 <img class="img-fluid rounded mb-4" src="img/Screenshot 2025-01-30 051130.png" alt="group project">
-                
-                <!-- Project Description -->
                 <div class="mb-4">
                     <h6 class="text-primary">Project Details</h6>
                     <p align="justify">
                         <strong>Project Description: Life Carrier – Seed Starter Tray & Seedling Planter</strong><br>
-For my digital marketing class, I developed a comprehensive marketing strategy for <em>Life Carrier</em>, an eco-friendly seed starter tray made from biodegradable materials. The project involved researching and analyzing sustainable consumer behavior, crafting a brand positioning statement, and creating a digital marketing plan.</p>
-
-<p><strong>What I Did:</strong><br>
-- Designed an eco-conscious brand identity, including the product's name, logo, and tagline.<br>
-- Defined the target audience and developed consumer personas to tailor marketing efforts.<br>
-- Formulated digital marketing objectives and strategies to raise brand awareness and increase conversions.<br>
-- Planned a creative brief, influencer program, and digital ad campaigns to engage customers through social media platforms.<br>
-- Created a website concept with interactive features to educate and engage users.</p>
-
-<p><strong>What I Learned:</strong><br>
-- The importance of sustainability in product design and how it aligns with consumer values.<br>
-- How to create a comprehensive digital marketing plan, from identifying target segments to setting KPIs.<br>
-- The effectiveness of using digital platforms, influencers, and creative campaigns in promoting eco-friendly products.<br>
-- The significance of building a brand with strong values to appeal to conscious consumers.</p>
-
-<p>This project has enhanced my skills in digital marketing strategy, branding, and sustainable product promotion, providing a practical understanding of how to execute a marketing campaign with a focus on environmental consciousness.</p>
-
-                
+                        For my digital marketing class, I developed a comprehensive marketing strategy for <em>Life Carrier</em>, an eco-friendly seed starter tray made from biodegradable materials. The project involved researching and analyzing sustainable consumer behavior, crafting a brand positioning statement, and creating a digital marketing plan.</p>
+                    <p><strong>What I Did:</strong><br>
+                        - Designed an eco-conscious brand identity, including the product's name, logo, and tagline.<br>
+                        - Defined the target audience and developed consumer personas to tailor marketing efforts.<br>
+                        - Formulated digital marketing objectives and strategies to raise brand awareness and increase conversions.<br>
+                        - Planned a creative brief, influencer program, and digital ad campaigns to engage customers through social media platforms.<br>
+                        - Created a website concept with interactive features to educate and engage users.</p>
+                    <p><strong>What I Learned:</strong><br>
+                        - The importance of sustainability in product design and how it aligns with consumer values.<br>
+                        - How to create a comprehensive digital marketing plan, from identifying target segments to setting KPIs.<br>
+                        - The effectiveness of using digital platforms, influencers, and creative campaigns in promoting eco-friendly products.<br>
+                        - The significance of building a brand with strong values to appeal to conscious consumers.</p>
                 </div>
-
-                <!-- PDF Download Section -->
                 <div class="text-center">
                     <h6 class="text-primary mb-3">Download Project Files</h6>
                     <a href="img/Green Leaves Background Watercolor Presentation (2).pptx" class="btn btn-primary" download>
@@ -702,7 +669,6 @@ For my digital marketing class, I developed a comprehensive marketing strategy f
         transition: transform 0.3s ease;
     }
 
-    /* Animation for icon and text */
     .portfolio-btn:hover i,
     .portfolio-btn:hover p {
         animation: bounce 0.5s;
@@ -716,31 +682,118 @@ For my digital marketing class, I developed a comprehensive marketing strategy f
             transform: translateY(-5px);
         }
     }
+
+    #portfolio-flters {
+        padding: 0;
+        margin: 0;
+    }
+
+    #portfolio-flters li {
+        cursor: pointer;
+        display: inline-block;
+        margin: 10px 5px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1;
+        transition: all 0.3s ease-in-out;
+    }
+
+    #portfolio-flters li:hover,
+    #portfolio-flters li.active {
+        color: #ffffff;
+        background: #0BCEAF;
+    }
+
+    .modal-content {
+        border-radius: 8px;
+    }
+
+    .modal-header {
+        border-bottom: 1px solid #dee2e6;
+        background-color: #f8f9fa;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .modal-footer {
+        border-top: 1px solid #dee2e6;
+        background-color: #f8f9fa;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+    .btn-primary {
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    @media (max-width: 768px) {
+        .portfolio-btn p {
+            font-size: 16px;
+        }
+        
+        .portfolio-btn i {
+            font-size: 30px !important;
+        }
+
+        #portfolio-flters li {
+            font-size: 14px;
+            margin: 5px 3px;
+        }
+    }
+
+    .portfolio-item img {
+        transition: transform 0.3s ease;
+    }
+
+    .portfolio-item:hover img {
+        transform: scale(1.05);
+    }
+
+    .modal.fade .modal-dialog {
+        transition: transform 0.3s ease-out;
+    }
+
+    .modal.show .modal-dialog {
+        transform: none;
+    }
 </style>
 
 <script>
     $(document).ready(function() {
-        // Initialize portfolio items
         $('.portfolio-btn a').click(function(e) {
             e.preventDefault();
             $($(this).data('target')).modal('show');
         });
 
-        // Add smooth transition for modal
         $('.modal').on('show.bs.modal', function () {
             $(this).fadeIn();
         });
 
-        // Add hover effect for download button
         $('.btn-primary').hover(
             function() { $(this).addClass('shadow'); },
             function() { $(this).removeClass('shadow'); }
         );
+
+        // Initialize isotope for filtering
+        $('.portfolio-container').isotope({
+            itemSelector: '.portfolio-item',
+            layoutMode: 'fitRows'
+        });
+
+        $('#portfolio-flters li').on('click', function () {
+            $("#portfolio-flters li").removeClass('active');
+            $(this).addClass('active');
+
+            $('.portfolio-container').isotope({
+                filter: $(this).data('filter')
+            });
+        });
     });
 </script>
-                
-    <!-- Portfolio End -->
-
 
     <!-- Testimonial Start -->
   <!-- <div class="container-fluid py-5" id="testimonial">
