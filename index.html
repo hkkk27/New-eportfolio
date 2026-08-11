@@ -50,7 +50,6 @@
                 <a href="#skill" class="nav-item nav-link">Skill</a>
                 <a href="#service" class="nav-item nav-link">Achievements</a>
                 <a href="#portfolio" class="nav-item nav-link">Projects</a>
-                <a href="#blog" class="nav-item nav-link">Digital Literacy</a>
                 <a href="#contact" class="nav-item nav-link">Contact</a>
             </div>
             <a href="#contact" class="btn btn-outline-primary d-none d-lg-block">Hire Me</a>
@@ -202,20 +201,62 @@
             </div>
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <h6 class="font-weight-bold">Programming & Backend</h6>
-                    <p>Python, C++, SQL, FastAPI, REST APIs, API Integration</p>
-                    <h6 class="font-weight-bold mt-4">Databases</h6>
-                    <p>SQLite, PostgreSQL, Supabase</p>
-                    <h6 class="font-weight-bold mt-4">AI & Automation</h6>
-                    <p>LLM-based AI Tools, Prompt Engineering, Generative AI, Open-source LLMs (Hugging Face, LLaMA), OpenRouter, Workflow Automation</p>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Python</h6>
+                            <h6 class="font-weight-bold">90%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">FastAPI & REST APIs</h6>
+                            <h6 class="font-weight-bold">85%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">SQL & Databases</h6>
+                            <h6 class="font-weight-bold">85%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-6">
-                    <h6 class="font-weight-bold">Data & Analytics</h6>
-                    <p>Power BI, Tableau, Excel, Pandas, NumPy, Matplotlib, Data Analytics & Visualization, Data Mining</p>
-                    <h6 class="font-weight-bold mt-4">Tools & Platforms</h6>
-                    <p>Git, GitHub, KoBoToolbox, Wix, Notion API, Twilio</p>
-                    <h6 class="font-weight-bold mt-4">Media & Creative</h6>
-                    <p>Video Editing (DaVinci Resolve, Filmora, CapCut), Content Marketing, Canva</p>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Generative AI & LLMs</h6>
+                            <h6 class="font-weight-bold">90%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Data Analytics & Power BI</h6>
+                            <h6 class="font-weight-bold">80%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Video Editing (Canva, CapCut)</h6>
+                            <h6 class="font-weight-bold">90%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -316,6 +357,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li class="btn btn-sm btn-outline-primary m-1 active" data-filter="*">All</li>
                     <li class="btn btn-sm btn-outline-primary m-1" data-filter=".fullstack">Fullstack</li>
                     <li class="btn btn-sm btn-outline-primary m-1" data-filter=".backend">Backend & AI</li>
+                    <li class="btn btn-sm btn-outline-primary m-1" data-filter=".first">Coding</li>
+                    <li class="btn btn-sm btn-outline-primary m-1" data-filter=".second">Group Projects</li>
+                    <li class="btn btn-sm btn-outline-primary m-1" data-filter=".third">Research Projects</li>
                 </ul>
             </div>
         </div>
@@ -359,6 +403,63 @@ document.addEventListener('DOMContentLoaded', function() {
                         </a>
                     </div>
                 </div>
+            </div>
+
+            <!-- Portfolio Item 4 -->
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                <div class="position-relative overflow-hidden mb-2">
+                    <img class="img-fluid rounded w-100" src="img/Screenshot 2025-01-29 234222.png" alt="Project 1">
+                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center flex-column">
+                        <a href="#" data-toggle="modal" data-target="#portfolioModal4">
+                            <i class="fa fa-plus text-white mb-2" style="font-size: 40px;"></i>
+                            <p class="text-white m-0">Click Here</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 5 -->
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                <div class="position-relative overflow-hidden mb-2">
+                    <img class="img-fluid rounded w-100" src="img/Screenshot 2025-01-30 044451.png" alt="Project 2">
+                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center flex-column">
+                        <a href="#" data-toggle="modal" data-target="#portfolioModal5">
+                            <i class="fa fa-plus text-white mb-2" style="font-size: 40px;"></i>
+                            <p class="text-white m-0">Click Here</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 6 -->
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+                <div class="position-relative overflow-hidden mb-2">
+                    <img class="img-fluid rounded w-100" src="img/researchphoto.jpg" alt="Project 3">
+                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center flex-column">
+                        <a href="#" data-toggle="modal" data-target="#portfolioModal6">
+                            <i class="fa fa-plus text-white mb-2" style="font-size: 40px;"></i>
+                            <p class="text-white m-0">Click Here</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 7 -->
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                <div class="position-relative overflow-hidden mb-2">
+                    <img class="img-fluid rounded w-100" src="img/Screenshot 2025-01-30 051130.png" alt="Project 4">
+                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center flex-column">
+                        <a href="#" data-toggle="modal" data-target="#portfolioModal7">
+                            <i class="fa fa-plus text-white mb-2" style="font-size: 40px;"></i>
+                            <p class="text-white m-0">Click Here</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <button id="show-more-projects" class="btn btn-outline-primary shadow">Show More</button>
             </div>
         </div>
     </div>
@@ -448,6 +549,151 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="text-center">
                     <a href="https://github.com/hkkk27/whatsapp-ai-agent" target="_blank" class="btn btn-primary">
                         <i class="fab fa-github mr-2"></i>View on GitHub
+                    </a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 4 -->
+<div class="modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-labelledby="portfolioModalLabel4" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="portfolioModalLabel4">Sleep Calculator</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img class="img-fluid rounded mb-4" src="img/Screenshot 2025-01-29 234222.png" alt="Sleep calculator">
+                <div class="mb-4">
+                    <h6 class="text-primary">Project Overview</h6>
+                    <p align="justify">
+                        This Sleep Time Calculator is a web-based tool that helps users determine the best times to go to bed in order to wake up feeling refreshed. The tool calculates sleep times based on a user's desired wake-up time, considering the sleep cycle duration of 90 minutes. It provides multiple sleep time options, ranging from 1 to 6 complete sleep cycles, to ensure users can align their sleep schedule with optimal rest periods.</p>
+                    <p><b>Features:</b><br>
+                        1. User Input: Users enter their wake-up time in a 24-hour format.<br>
+                        2. Sleep Cycle Calculation: The tool calculates sleep times based on 90-minute cycles.<br>
+                        3. Multiple Sleep Options: It provides suggestions for when to fall asleep to complete a full sleep cycle before waking up.<br>
+                        4. Output Display: The results are shown in a list format for easy understanding, offering users different sleep time options.</p>
+                    <p>The design is user-friendly, with a modern, clean interface featuring dark-themed colors and easy-to-read typography. The tool is meant to assist users in improving their sleep habits by calculating the best sleep times to optimize their rest.</p>
+                </div>
+                <div class="text-center">
+                    <h6 class="text-primary mb-3">Download the sleep calculator</h6>
+                    <a href="img/sleep_calculator.html" class="btn btn-primary" download>
+                        <i class="fa fa-download mr-2"></i>Download
+                    </a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 5 -->
+<div class="modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-labelledby="portfolioModalLabel5" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="portfolioModalLabel5">Project Safar</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img class="img-fluid rounded mb-4" src="img/Screenshot 2025-01-30 044451.png" alt="Project Safar">
+                <div class="mb-4">
+                    <h6 class="text-primary">Project Details</h6>
+                    <p align="justify">
+                        This project is an advertising campaign for an idea we developed: "Safar," a women-driven cab service designed to ensure safer transportation for female passengers. The campaign was part of our advertising class, where we researched the challenges women face with public transportation. Based on our findings, we focused on addressing the demand for additional safety features such as GPS tracking and emergency buttons. The goal of this project was to create an ad concept that would effectively communicate the need for safer transportation options for women.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <h6 class="text-primary mb-3">Download the project</h6>
+                    <a href="img/Safar Final PPT.pdf" class="btn btn-primary" download>
+                        <i class="fa fa-download mr-2"></i>Download PDF
+                    </a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 6 -->
+<div class="modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-labelledby="portfolioModalLabel6" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="portfolioModalLabel6">Research Essay</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img class="img-fluid rounded mb-4" src="img/researchphoto.jpg" alt="Research Project">
+                <div class="mb-4">
+                    <h6 class="text-primary">Project Overview</h6>
+                    <p align="justify">
+                        <b>Research on Data Collection and Its Impact on Freedom of Thought</b>
+                    </p>
+                    <p>I conducted research exploring how data collection in today's digital age impacts individual autonomy and reinforces societal biases. The study examined how personal data is used by corporations to predict and influence consumer behavior, as well as its effects on political decision-making. By analyzing the role of algorithms, AI, and neuromarketing, my research highlighted the growing risks posed by unchecked data collection, including the reinforcement of existing inequalities and the creation of echo chambers. This project aims to raise awareness about the ethical concerns surrounding data use and the importance of regulating it.</p>
+                </div>
+                <div class="text-center">
+                    <h6 class="text-primary mb-3">Download Research Paper</h6>
+                    <a href="img/Harshit Singh-final research paper (1).pdf" class="btn btn-primary" download>
+                        <i class="fa fa-download mr-2"></i>Download PDF
+                    </a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 7 -->
+<div class="modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-labelledby="portfolioModalLabel7" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="portfolioModalLabel7">Seed Starter Tray</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img class="img-fluid rounded mb-4" src="img/Screenshot 2025-01-30 051130.png" alt="group project">
+                <div class="mb-4">
+                    <h6 class="text-primary">Project Details</h6>
+                    <p align="justify">
+                        <strong>Project Description: Life Carrier – Seed Starter Tray & Seedling Planter</strong><br>
+                        For my digital marketing class, I developed a comprehensive marketing strategy for <em>Life Carrier</em>, an eco-friendly seed starter tray made from biodegradable materials. The project involved researching and analyzing sustainable consumer behavior, crafting a brand positioning statement, and creating a digital marketing plan.</p>
+                    <p><strong>What I Did:</strong><br>
+                        - Designed an eco-conscious brand identity, including the product's name, logo, and tagline.<br>
+                        - Defined the target audience and developed consumer personas to tailor marketing efforts.<br>
+                        - Formulated digital marketing objectives and strategies to raise brand awareness and increase conversions.<br>
+                        - Planned a creative brief, influencer program, and digital ad campaigns to engage customers through social media platforms.<br>
+                        - Created a website concept with interactive features to educate and engage users.</p>
+                    <p><strong>What I Learned:</strong><br>
+                        - The importance of sustainability in product design and how it aligns with consumer values.<br>
+                        - How to create a comprehensive digital marketing plan, from identifying target segments to setting KPIs.<br>
+                        - The effectiveness of using digital platforms, influencers, and creative campaigns in promoting eco-friendly products.<br>
+                        - The significance of building a brand with strong values to appeal to conscious consumers.</p>
+                </div>
+                <div class="text-center">
+                    <h6 class="text-primary mb-3">Download Project Files</h6>
+                    <a href="img/Green Leaves Background Watercolor Presentation (2).pptx" class="btn btn-primary" download>
+                        <i class="fa fa-download mr-2"></i>Download Files
                     </a>
                 </div>
             </div>
@@ -619,22 +865,68 @@ document.addEventListener('DOMContentLoaded', function() {
             function() { $(this).removeClass('shadow'); }
         );
 
-        // Initialize isotope for filtering
-        $('.portfolio-container').isotope({
+        // Initialize isotope for filtering and Show More logic
+        var $grid = $('.portfolio-container');
+        var initialItems = 3;
+        var showMore = false;
+
+        // Hide items beyond initial limit initially
+        $('.portfolio-item').each(function(i) {
+            if (i >= initialItems) {
+                $(this).addClass('hide-item');
+            }
+        });
+
+        $grid.isotope({
             itemSelector: '.portfolio-item',
-            layoutMode: 'fitRows'
+            layoutMode: 'fitRows',
+            filter: function() {
+                if (showMore) {
+                    return true;
+                }
+                return !$(this).hasClass('hide-item');
+            }
+        });
+
+        $('#show-more-projects').on('click', function() {
+            showMore = !showMore;
+            $(this).text(showMore ? 'Show Less' : 'Show More');
+            
+            var currentFilter = $('#portfolio-flters li.active').data('filter');
+            $grid.isotope({
+                filter: function() {
+                    var isVisible = showMore ? true : !$(this).hasClass('hide-item');
+                    if (currentFilter === '*') {
+                        return isVisible;
+                    }
+                    return isVisible && $(this).is(currentFilter);
+                }
+            });
         });
 
         $('#portfolio-flters li').on('click', function () {
             $("#portfolio-flters li").removeClass('active');
             $(this).addClass('active');
 
-            $('.portfolio-container').isotope({
-                filter: $(this).data('filter')
+            var filterValue = $(this).data('filter');
+            $grid.isotope({
+                filter: function() {
+                    var isVisible = showMore ? true : !$(this).hasClass('hide-item');
+                    if (filterValue === '*') {
+                        return isVisible;
+                    }
+                    return isVisible && $(this).is(filterValue);
+                }
             });
         });
     });
 </script>
+
+<style>
+    .hide-item {
+        display: none;
+    }
+</style>
 
     <!-- Testimonial Start -->
   <!-- <div class="container-fluid py-5" id="testimonial">
@@ -675,111 +967,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Testimonial End -->
 
 
-    <!-- Blog Start -->
-    <div class="container-fluid pt-5" id="blog">
-        <div class="container">
-        <div class="position-relative d-flex align-items-center justify-content-center">
-            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">ITLI102</h1>
-            <h1 class="position-absolute text-uppercase text-primary">Digital Literacy</h1>
-        </div>
-        <!-- Added paragraph below title -->
-        <div class="text-center mb-5">
-            <p class="lead">Digital Literacy is a core course offered at <b>FLAME University</b> in the first year of the undergraduate program. This <b>2-credit</b> course is essential in today’s technological era, equipping students with the knowledge and skills to navigate digital spaces effectively and securely. Through this course, I have gained hands-on experience in various aspects of digital proficiency—from creating an <b>e-portfolio</b> to coding with <b>HTML</b> and <b>CSS</b>. It has enhanced my technical abilities and broadened my understanding of how to leverage technology efficiently. Below, you’ll find a showcase of my work, demonstrating the skills I’ve acquired.</p>
-        </div>
-    <!-- Previous code remains the same until the blog entries -->
-    <div class="row">
-        <div class="col-lg-4 mb-5">
-            <div class="position-relative mb-4">
-                <img class="img-fluid rounded w-100" src="img/kblog2.jpg" alt="">
-                <div class="blog-date">
-                    <h4 class="font-weight-bold mb-n1">30</h4>
-                    <small class="text-white text-uppercase">Jan</small>
-                </div>
-            </div>
-            <h5 class="font-weight-medium mb-4">Key Takeaways & Experience</h5>
-            <div class="blog-content" style="display: none;">
-               <p align="justify">
-    I'm amazed at how much I've grown in such a short time during the <b>Digital Literacy</b> course. This course significantly enhanced my understanding of technology for both personal and professional use. The <b>HTML</b> and <b>CSS</b> tutorials, in particular, transformed my web design skills. Before, I had basic knowledge, but now I can confidently design websites and build my own <b>ePortfolio</b>—which you can see at the top of this section.  
-</p>
-
-<p align="justify">
-    The journey wasn’t just about learning technical skills. The experience of creating projects, such as the <b>Bucket list</b> and exploring <b>Modern AI</b>, was both enlightening and practical. I also learned how to navigate the importance of <b>online security</b> and <b>digital footprints</b>, making me aware of the ethical implications of my online actions.  
-</p>
-
-<p align="justify">
-    One of the most valuable lessons was participating in <b>discussion forums</b> and assignments with peers, which not only helped clarify concepts but also fostered a collaborative learning environment. Most importantly, this course instilled in me the idea that lifelong learning and adaptation are key to becoming truly digitally literate. I'm excited to apply these skills in my academic and professional journey, making this transformation from illiteracy to <b>digital literacy</b> life-changing.
-</p>
-
-
-            </div>
-            <button class="btn btn-sm btn-outline-primary py-2 read-more-btn">Read More</button>
-        </div>
-
-        <div class="col-lg-4 mb-5">
-    <div class="position-relative mb-4">
-        <img class="img-fluid rounded w-100" src="img/Screenshot 2025-01-30 004244.png" alt="">
-        <div class="blog-date">
-            <h4 class="font-weight-bold mb-n1">20</h4>
-            <small class="text-white text-uppercase">Jan</small>
-        </div>
-    </div>
-    <h5 class="font-weight-medium mb-4">Learning HTML & CSS </h5>
-    <div class="blog-content" style="display: none;">
-        <p align="justify">When I first dabbled in <b>HTML</b> and <b>CSS</b>, it felt like discovering a new avenue for personal expression. Although I had some basic knowledge of these languages before, this course truly enhanced my skills. I realized that even something as intricate as a webpage could be created by me. HTML provides the structure of a website, while <b>CSS</b> brings it to life by adding colors, fonts, and layouts. It was like assembling a puzzle—once the structure was in place, I could add my personal touch to it.</p>
-
-        <p align="justify">The process was made much easier thanks to the clear guidance throughout the course. We were walked through the setup and tools needed, which gave me confidence in navigating the coding process. For my first project, I created a personal website using simple <b>HTML</b> tags like <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, and <code>&lt;img&gt;</code>. To make the page unique, I experimented with <b>CSS</b> to customize colors and layouts. It was incredibly rewarding to see my name, picture, and brief introduction neatly displayed on the page. This was more than just a simple project; it marked my first step into web creation.</p>
-
-        <p align="justify">In addition to my personal website, I also worked on several projects using <b>HTML</b> and <b>CSS</b>. The <b>ePortfolio</b> you can see was made using a template code, but I later designed my own, which you can view at the top of this section. Additionally, if you see the <b>Privacy Policy</b> and <b>Help Pages</b> of my <b>ePortfolio</b> by scrolling down, you'll notice that these pages were created by me as well. This experience has sparked my enthusiasm for web design and development, and I'm excited to continue enhancing my projects.</p>
-    </div>
-    <button class="btn btn-sm btn-outline-primary py-2 read-more-btn">Read More</button>
-</div>
-
-        <div class="col-lg-4 mb-5">
-            <div class="position-relative mb-4">
-                <img class="img-fluid rounded w-100" src="img/123456789.png" alt="">
-                <div class="blog-date">
-                    <h4 class="font-weight-bold mb-n1">30</h4>
-                    <small class="text-white text-uppercase">Jan</small>
-                </div>
-            </div>
-            <h5 class="font-weight-medium mb-4">E-Portfolio: My Digital Profile</h5>
-            <div class="blog-content" style="display: none;">
-                <p align="justify">
-Through my journey with <b><i>HTML</i></b> and <b><i>CSS</i></b>, I've gained a deeper understanding of web development and how to work with template code. Initially, I wasn't fully aware of the importance of customizing templates, but as I learned more, I began editing the code to create a personalized <b><i>digital portfolio</i></b>. This portfolio showcases my progress, and you can see the live version.
-
-At first, I wasn't sure what to include in my portfolio or what to leave out. However, the course lectures explained the key elements of creating a well-structured portfolio in great detail, guiding me on how to select the most relevant content. I made several drafts, including one <b><i>personal profile draft</i></b> and another version in the <b><i>image section</i></b>.
-
-The sessions in the <b><i>Digital Hub</i></b> were also immensely helpful. They allowed me to correct my mistakes and refine my approach to presenting content. With their guidance, I was able to identify what should be included and what can be omitted, ensuring that my <b><i>digital portfolio</i></b> reflects my skills and creativity in the best way possible.
-</p>
-
-
-
-            </div>
-            <button class="btn btn-sm btn-outline-primary py-2 read-more-btn">Read More</button>
-        </div>
-    </div>
-</div>
-
-<!-- Add this JavaScript code at the bottom of your body tag -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const readMoreBtns = document.querySelectorAll('.read-more-btn');
-    
-    readMoreBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            const content = this.previousElementSibling;
-            if (content.style.display === 'none') {
-                content.style.display = 'block';
-                this.textContent = 'Read Less';
-            } else {
-                content.style.display = 'none';
-                this.textContent = 'Read More';
-            }
-        });
-    });
-});
-</script>
-    <!-- Blog End -->
+    <!-- Blog section removed -->
 
 
     <!-- Contact Start -->
