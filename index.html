@@ -3,1059 +3,472 @@
 
 <head>
     <meta charset="utf-8">
-    <title>My E-Portfolio</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Harshit Singh · Freelance web designer and developer, Pune</title>
+    <meta name="description" content="Harshit Singh designs and builds websites: portfolio sites for academics, and sites for small businesses, artists and non-profits. Every site shown is live.">
+    <meta property="og:title" content="Harshit Singh · Freelance web designer and developer">
+    <meta property="og:description" content="Portfolio sites for academics, and websites for small businesses, artists and non-profits. Every site shown is live.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#F2F4FA">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230D1033'/%3E%3Ccircle cx='32' cy='32' r='11' fill='%232B3CF5'/%3E%3Cellipse cx='32' cy='32' rx='24' ry='9' fill='none' stroke='%23F2F4FA' stroke-width='2.5' transform='rotate(-22 32 32)'/%3E%3Ccircle cx='52' cy='23' r='4.5' fill='%23FFB21A'/%3E%3C/svg%3E">
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
-
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-
-    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="assets/css/site.css" rel="stylesheet">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="51">
-    <!-- Navbar Start -->
-    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
-        <a href="index.html" class="navbar-brand ml-lg-3">
-            <h1 class="m-0 display-5"><span class="text-primary">Harshit</span>Singh</h1>
+<body data-theme="paper">
+    <a class="skip" href="#work">Skip to the work</a>
+
+    <header class="nav">
+        <a class="nav__brand" href="#top" aria-label="Harshit Singh, back to top">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="6"/><ellipse cx="16" cy="16" rx="13.5" ry="5" transform="rotate(-22 16 16)"/><circle class="dot" cx="27.5" cy="11" r="2.6"/></svg>
+            Harshit Singh
         </a>
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
-            <div class="navbar-nav m-auto py-0">
-                <a href="#home" class="nav-item nav-link active">Home</a>
-                <a href="#about" class="nav-item nav-link">About</a>
-                <a href="#qualification" class="nav-item nav-link">Quality</a>
-                <a href="#skill" class="nav-item nav-link">Skill</a>
-                <a href="#service" class="nav-item nav-link">Achievements</a>
-                <a href="#portfolio" class="nav-item nav-link">Projects</a>
-                <a href="#contact" class="nav-item nav-link">Contact</a>
-            </div>
-            <a href="#contact" class="btn btn-outline-primary d-none d-lg-block">Hire Me</a>
-        </div>
-    </nav>
-    <!-- Navbar End -->
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+        <nav class="nav__links" id="nav-links" aria-label="Sections">
+            <a href="#work">Work</a>
+            <a href="#skills">Skills</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <a class="btn btn--solid nav__cta" href="mailto:harshit.singh@flame.edu.in">Email me</a>
+    </header>
 
-
-    <!-- Video Modal Start --
-    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>        
-                    <!-- 16:9 aspect ratio -->
-                    <!-- Favicon <div class="embed-responsive embed-responsive-16by9">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/H58vbez_m4E?si=6JJ0TLhYXUzc5Za7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <main>
+        <!-- Hero -->
+        <section class="hero" id="top" data-theme="paper">
+            <div class="hero__copy wrap">
+                <div>
+                    <p class="eyebrow">Freelance web designer and developer · Pune, India</p>
+                    <h1 class="hero__title">
+                        <span class="w" style="--i:0">Harshit</span> <span class="w" style="--i:1">Singh</span>
+                        <span class="w" style="--i:2">designs</span> <span class="w" style="--i:3">and</span>
+                        <span class="w" style="--i:4">builds</span> <span class="w w--mark" style="--i:5">websites.</span>
+                    </h1>
+                </div>
+                <div class="hero__side">
+                    <p>Portfolio sites for academics, and websites for small businesses, artists and non-profits. Every site orbiting below is live. Spin the ring and open one.</p>
+                    <div class="hero__actions">
+                        <a class="btn btn--solid" href="#work">See all sites</a>
+                        <a class="btn btn--line" href="mailto:harshit.singh@flame.edu.in">Email me</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- Video Modal End -->
 
+            <div class="orbit" role="group" aria-label="Live sites. Drag to spin, or use the previous and next buttons.">
+                <svg class="orbit__path orbit__path--back" aria-hidden="true"><path/></svg>
+                <canvas class="orbit__globe" aria-hidden="true"></canvas>
+                <svg class="orbit__path orbit__path--front" aria-hidden="true"><path/></svg>
 
-    <!-- Header Start -->
-    <div class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
-                    <img class="img-fluid w-100 rounded-circle shadow-sm" src="img/profile.jpg" alt="">
-                </div>
-                <div class="col-lg-7 text-center text-lg-left">
-                    <h3 class="text-white font-weight-normal mb-3">I'm</h3>
-                    <h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #ffffff;">Harshit Singh</h1>
-                    <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
-                    <div class="typed-text d-none">Data Science & Economics Student , Web Developer , AI Automation Enthusiast</div>
-                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
-                      <a href="Harshit_CV_Data_Science.pdf" 
-   class="btn btn-outline-light mr-5" download>
-    <i class="fa fa-download mr-2"></i>Download CV
-</a>
-                        
-                       
-                        
-                        
-                                               
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Header End -->
-
-
-    <!-- About Start -->
-    <div class="container-fluid py-5" id="about">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">About</h1>
-                <h1 class="position-absolute text-uppercase text-primary">About Me</h1>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-lg-5 pb-4 pb-lg-0">
-                    <img class="img-fluid rounded w-100" src="img/about.jpg" alt="">
-                </div>
-                <div class="col-lg-7">
-                    <h3 class="mb-4">Profile Summary</h3>
-                    <p>B.Sc. Data Science & Economics student at FLAME University with a focus on backend-oriented web development and AI automation. Experienced in building and contributing to business applications using Python, FastAPI, REST APIs, databases, and LLM integrations. Developed a CRM platform, an offline-first event management system, and AI-powered workflow automation, with practical experience applying technology to real business problems.</p>
-                    <div class="row mb-3">
-                        <div class="col-sm-6 py-2"><h6>Name: <span class="text-secondary">Harshit Singh</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Phone: <span class="text-secondary">+91 9503560489</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Degree: <span class="text-secondary">B.Sc. Data Science & Economics</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Email: <span class="text-secondary">harshit.singh@flame.edu.in</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>University: <span class="text-secondary">FLAME University</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Address: <span class="text-secondary">Pune, Maharashtra</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>LinkedIn: <span class="text-secondary"><a href="https://www.linkedin.com/in/harshit-singh27/" target="_blank">harshit-singh27</a></span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>GitHub: <span class="text-secondary"><a href="https://github.com/hkkk27" target="_blank">hkkk27</a></span></h6></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About End -->
-
-
-    <!-- Qualification Start -->
-    <div class="container-fluid py-5" id="qualification">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Quality</h1>
-                <h1 class="position-absolute text-uppercase text-primary">Education & Expericence</h1>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h3 class="mb-4">Education</h3>
-                    <div class="border-left border-primary pt-2 pl-4 ml-2">
-                        <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">B.Sc. Data Science & Economics</h5>
-                            <p class="mb-2"><strong>FLAME University, Pune</strong> | <small>Aug 2024 - Present</small></p>
-                            <p>Current GPA: 8.37. Focusing on backend-oriented web development, data science, and AI automation.</p>
-                        </div>
-                        <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Secondary & Senior Secondary</h5>
-                            <p class="mb-2"><strong>Jawahar Navodaya Vidyalaya, Palghar</strong> | <small>2020 - 2024</small></p>
-                            <p>Grade 12: 79% | Grade 10: 93%</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <h3 class="mb-4">Experience</h3>
-                    <div class="border-left border-primary pt-2 pl-4 ml-2">
-                        <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">IT Intern, Data Analytics & Technology</h5>
-                            <p class="mb-2"><strong>Tata Trent Limited</strong> | <small></small></p>
-                            <p>Worked on a Retail Analytics and Business Intelligence project using Power BI, analyzing 1M+ transactional records. Contributed to backend development of a CRM platform using Python, FastAPI, REST APIs, SQLite, JWT authentication. Proposed and prototyped a Visual Merchandising AI Automation system to generate product-placement suggestions.</p>
-                        </div>
-                        <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Data Analytics & Visualization Intern</h5>
-                            <p class="mb-2"><strong>WageIndicator Foundation</strong> | <small>Sept 2025 - Present</small></p>
-                            <p>Collected primary socio-economic data and validated multi-country datasets. Analyzed indicators and designed Tableau dashboards to visualize regional and gender-based labour market trends.</p>
-                        </div>
-                        <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Field Intern</h5>
-                            <p class="mb-2"><strong>Mazdoor Kisan Shakti Sangathan (MKSS)</strong> | <small>May 2025 - Jul 2025</small></p>
-                            <p>Conducted field research on social welfare schemes and rural governance across villages in Rajasthan. Examined grassroots issues related to livelihoods, transparency, and access to entitlements.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Qualification End -->
-
-
-    <!-- Skill Start -->
-    <div class="container-fluid py-5" id="skill">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Skills</h1>
-                <h1 class="position-absolute text-uppercase text-primary">My Skills</h1>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Python</h6>
-                            <h6 class="font-weight-bold">90%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">FastAPI & REST APIs</h6>
-                            <h6 class="font-weight-bold">85%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">SQL & Databases</h6>
-                            <h6 class="font-weight-bold">85%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Generative AI & LLMs</h6>
-                            <h6 class="font-weight-bold">90%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Data Analytics & Power BI</h6>
-                            <h6 class="font-weight-bold">80%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Video Editing (Canva, CapCut)</h6>
-                            <h6 class="font-weight-bold">90%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Skill End -->
-
-
-    <!-- Services Start -->
-    <div class="container-fluid pt-5" id="service">
-    <div class="container">
-        <div class="position-relative d-flex align-items-center justify-content-center">
-            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Achievements</h1>
-            <h1 class="position-absolute text-uppercase text-primary">My Achievements</h1>
-        </div>
-        <div class="row pb-3">
-            <div class="col-lg-4 col-md-6 text-center mb-5">
-                <div class="d-flex align-items-center justify-content-center mb-4">
-                    <i class="fa fa-2x fa-users service-icon bg-primary text-white mr-3"></i>
-                    <h4 class="font-weight-bold m-0">Leadership & Volunteering</h4>
-                </div>
-                <div class="short-text" style="text-align: justify;">
-                    <strong>Karta Initiative Mentor</strong>, <strong>Right to Food Campaign</strong> volunteer, and <strong>Mess Captain</strong> at JNV.
-                </div>
-                <div class="full-text" style="display: none; text-align: justify;">
-                    Mentored undergraduates on academics and personal growth. Executed logistics for 100+ participants in the Right to Food Campaign. Directed dining operations and budgeting for 400+ students as Mess Captain at JNV. Organized university events and outreach programs.
-                </div>
-                <a class="border-bottom border-primary text-decoration-none read-more-link" href="javascript:void(0);">Read More</a>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 text-center mb-5">
-                <div class="d-flex align-items-center justify-content-center mb-4">
-                    <i class="fa fa-2x fa-award service-icon bg-primary text-white mr-3"></i>
-                    <h4 class="font-weight-bold m-0">Awards & Honors</h4>
-                </div>
-                <div class="short-text" style="text-align: justify;">
-                    Awarded the <strong>Karta Catalyst Scholar</strong> and a <strong>100% Merit Scholarship</strong> at FLAME University.
-                </div>
-                <div class="full-text" style="display: none; text-align: justify;">
-                    Recognized as a Karta Catalyst Scholar for leadership and academics. Received a 100% Merit Scholarship at FLAME University. Awarded the JNV Scholarship for Academic Excellence (Grades 9–12) and received Dean’s Honor recognition in the first year for academic excellence.
-                </div>
-                <a class="border-bottom border-primary text-decoration-none read-more-link" href="javascript:void(0);">Read More</a>
+                <a class="sat" href="https://studio-saanjh-two.vercel.app" target="_blank" rel="noopener" data-name="Studio Saanjh" data-meta="Interior design studio · Pune" data-pin="pune">
+                    <span class="sat__bar"><i></i><i></i><i></i><span>studio-saanjh-two.vercel.app</span></span>
+                    <img src="assets/work/saanjh-s.jpg" width="560" height="350" alt="Studio Saanjh home page" draggable="false">
+                </a>
+                <a class="sat" href="https://phad-painting.vercel.app" target="_blank" rel="noopener" data-name="Vijay Joshi · Phad Painting" data-meta="Folk artist · Shahpura, Rajasthan" data-pin="shahpura">
+                    <span class="sat__bar"><i></i><i></i><i></i><span>phad-painting.vercel.app</span></span>
+                    <img src="assets/work/phad-s.jpg" width="560" height="350" alt="Phad Painting of Shahpura home page" draggable="false">
+                </a>
+                <a class="sat" href="https://stambh-realty.vercel.app/Home.dc.html" target="_blank" rel="noopener" data-name="Stambh Realty" data-meta="Residential developer · Pune" data-pin="pune">
+                    <span class="sat__bar"><i></i><i></i><i></i><span>stambh-realty.vercel.app</span></span>
+                    <img src="assets/work/stambh-s.jpg" width="560" height="350" alt="Stambh Realty home page" draggable="false">
+                </a>
+                <a class="sat" href="https://blesssing-smile-foundation.vercel.app" target="_blank" rel="noopener" data-name="Blessing Smile Foundation" data-meta="Non-profit · Varanasi" data-pin="varanasi">
+                    <span class="sat__bar"><i></i><i></i><i></i><span>blesssing-smile-foundation.vercel.app</span></span>
+                    <img src="assets/work/blessing-s.jpg" width="560" height="350" alt="Blessing Smile Foundation home page" draggable="false">
+                </a>
+                <a class="sat" href="https://balaji-urban-futures.vercel.app" target="_blank" rel="noopener" data-name="Dr. Balaji Kalluri · Immersive" data-meta="Academic portfolio · FLAME University, Pune" data-pin="pune">
+                    <span class="sat__bar"><i></i><i></i><i></i><span>balaji-urban-futures.vercel.app</span></span>
+                    <img src="assets/work/balaji-urban-s.jpg" width="560" height="350" alt="Dr. Balaji Kalluri portfolio, immersive version" draggable="false">
+                </a>
+                <a class="sat" href="https://azal-mehandi-art.vercel.app" target="_blank" rel="noopener" data-name="Azal Mehandi Art" data-meta="Henna artist · Sharjah and Dubai" data-pin="sharjah">
+                    <span class="sat__bar"><i></i><i></i><i></i><span>azal-mehandi-art.vercel.app</span></span>
+                    <img src="assets/work/azal-s.jpg" width="560" height="350" alt="Azal Mehandi Art home page" draggable="false">
+                </a>
+                <a class="sat" href="https://security-rust-ten.vercel.app" target="_blank" rel="noopener" data-name="Northwatch Security" data-meta="Security services · Concept" data-pin="">
+                    <span class="sat__bar"><i></i><i></i><i></i><span>security-rust-ten.vercel.app</span></span>
+                    <img src="assets/work/northwatch-s.jpg" width="560" height="350" alt="Northwatch Security home page" draggable="false">
+                </a>
+                <a class="sat" href="https://a-box-of-goodness.vercel.app" target="_blank" rel="noopener" data-name="A Box of Goodness" data-meta="Volunteer-run charity · Bahrain" data-pin="bahrain">
+                    <span class="sat__bar"><i></i><i></i><i></i><span>a-box-of-goodness.vercel.app</span></span>
+                    <img src="assets/work/boxofgoodness-s.jpg" width="560" height="350" alt="A Box of Goodness home page" draggable="false">
+                </a>
+                <a class="sat" href="https://www.vidit.tech/" target="_blank" rel="noopener" data-name="Vidit Gupta" data-meta="ML research portfolio · Mumbai" data-pin="mumbai">
+                    <span class="sat__bar"><i></i><i></i><i></i><span>vidit.tech</span></span>
+                    <img src="assets/work/vidit-s.jpg" width="560" height="350" alt="Vidit Gupta research portfolio" draggable="false">
+                </a>
+                <a class="sat" href="https://professinal-coaches.vercel.app" target="_blank" rel="noopener" data-name="Meera Iyer" data-meta="Executive coach · Pune" data-pin="pune">
+                    <span class="sat__bar"><i></i><i></i><i></i><span>professinal-coaches.vercel.app</span></span>
+                    <img src="assets/work/meera-s.jpg" width="560" height="350" alt="Meera Iyer executive coaching home page" draggable="false">
+                </a>
+                <a class="sat" href="https://balaji-minimal.vercel.app" target="_blank" rel="noopener" data-name="Dr. Balaji Kalluri · Minimal" data-meta="Academic portfolio · FLAME University, Pune" data-pin="pune">
+                    <span class="sat__bar"><i></i><i></i><i></i><span>balaji-minimal.vercel.app</span></span>
+                    <img src="assets/work/balaji-minimal-s.jpg" width="560" height="350" alt="Dr. Balaji Kalluri portfolio, minimal version" draggable="false">
+                </a>
+                <a class="sat" href="https://balaji-flame-delta.vercel.app" target="_blank" rel="noopener" data-name="Dr. Balaji Kalluri · Editorial" data-meta="Academic portfolio · FLAME University, Pune" data-pin="pune">
+                    <span class="sat__bar"><i></i><i></i><i></i><span>balaji-flame-delta.vercel.app</span></span>
+                    <img src="assets/work/balaji-flame-s.jpg" width="560" height="350" alt="Dr. Balaji Kalluri portfolio, editorial version" draggable="false">
+                </a>
             </div>
 
-            <div class="col-lg-4 col-md-6 text-center mb-5">
-                <div class="d-flex align-items-center justify-content-center mb-4">
-                    <i class="fa fa-2x fa-chess-king service-icon bg-primary text-white mr-3"></i>
-                    <h4 class="font-weight-bold m-0">Sports & Digital Media</h4>
-                </div>
-                <div class="short-text" style="text-align: justify;">
-                    <strong>National-level chess player</strong> and successfully monetized a YouTube channel with 4,000+ subs.
-                </div>
-                <div class="full-text" style="display: none; text-align: justify;">
-                    National-level chess player and regional volleyball and kabaddi representative. On the digital front, built and monetized a YouTube Channel with over 4,000+ subscribers and 400K+ views, alongside experience in Amazon Affiliate Marketing.
-                </div>
-                <a class="border-bottom border-primary text-decoration-none read-more-link" href="javascript:void(0);">Read More</a>
+            <div class="facing wrap">
+                <button class="facing__step" type="button" data-step="-1" aria-label="Previous site">
+                    <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 4 6.5 10l6 6"/></svg>
+                </button>
+                <p class="facing__text">
+                    <strong class="facing__name">Studio Saanjh</strong>
+                    <span class="facing__meta">Interior design studio · Pune</span>
+                </p>
+                <a class="facing__open" href="https://studio-saanjh-two.vercel.app" target="_blank" rel="noopener">Open site <span aria-hidden="true">↗</span></a>
+                <button class="facing__step" type="button" data-step="1" aria-label="Next site">
+                    <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7.5 4 6 6-6 6"/></svg>
+                </button>
             </div>
-        </div>
-    </div>
-</div>
+        </section>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const readMoreLinks = document.querySelectorAll('.read-more-link');
-    
-    readMoreLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const parent = this.parentElement;
-            const shortText = parent.querySelector('.short-text');
-            const fullText = parent.querySelector('.full-text');
-            
-            if (fullText.style.display === 'none') {
-                shortText.style.display = 'none';
-                fullText.style.display = 'block';
-                this.textContent = 'Read Less';
-            } else {
-                shortText.style.display = 'block';
-                fullText.style.display = 'none';
-                this.textContent = 'Read More';
-            }
-        });
-    });
-});
-</script>
-    <!-- Services End -->
+        <!-- Work -->
+        <section class="section work" id="work" data-theme="ink">
+            <div class="wrap">
+                <header class="section__head" data-reveal>
+                    <p class="eyebrow">Work</p>
+                    <h2>Every site here is live. Open any of them.</h2>
+                    <p class="section__lede">Sites marked <span class="tag">Concept</span> are design studies built around a sample or fictional brief. The photos in them are stand-ins.</p>
+                </header>
 
+                <div class="filters" role="group" aria-label="Filter sites by kind" data-reveal>
+                    <button type="button" class="filters__btn" data-filter="all" aria-pressed="true">All sites</button>
+                    <button type="button" class="filters__btn" data-filter="portfolio" aria-pressed="false">Portfolios</button>
+                    <button type="button" class="filters__btn" data-filter="business" aria-pressed="false">Businesses</button>
+                    <button type="button" class="filters__btn" data-filter="community" aria-pressed="false">Non-profits and artists</button>
+                </div>
 
-   <!-- Portfolio Start -->
-<div class="container-fluid pt-5 pb-3" id="portfolio">
-    <div class="container">
-        <div class="position-relative d-flex align-items-center justify-content-center">
-            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Gallery</h1>
-            <h1 class="position-absolute text-uppercase text-primary">My Projects</h1>
-        </div>
-        <div class="row">
-            <div class="col-12 text-center mb-2">
-                <ul class="list-inline mb-4" id="portfolio-flters">
-                    <li class="btn btn-sm btn-outline-primary m-1 active" data-filter="*">All</li>
-                    <li class="btn btn-sm btn-outline-primary m-1" data-filter=".fullstack">Fullstack</li>
-                    <li class="btn btn-sm btn-outline-primary m-1" data-filter=".backend">Backend & AI</li>
-                    <li class="btn btn-sm btn-outline-primary m-1" data-filter=".first">Coding</li>
-                    <li class="btn btn-sm btn-outline-primary m-1" data-filter=".second">Group Projects</li>
-                    <li class="btn btn-sm btn-outline-primary m-1" data-filter=".third">Research Projects</li>
+                <ul class="grid" id="site-grid">
+                    <li class="site" data-cat="business" data-reveal>
+                        <a class="site__shot" href="https://studio-saanjh-two.vercel.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                            <img src="assets/work/saanjh.jpg" width="1120" height="700" alt="" loading="lazy">
+                        </a>
+                        <div class="site__body">
+                            <h3><a href="https://studio-saanjh-two.vercel.app" target="_blank" rel="noopener">Studio Saanjh</a> <span class="tag">Concept</span></h3>
+                            <p class="site__meta">Interior design studio · Pune</p>
+                            <p>Projects, process and services for a calm, tactile interior practice, with enquiries over WhatsApp.</p>
+                            <a class="site__url" href="https://studio-saanjh-two.vercel.app" target="_blank" rel="noopener">studio-saanjh-two.vercel.app <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </li>
+
+                    <li class="site" data-cat="community" data-reveal>
+                        <a class="site__shot" href="https://phad-painting.vercel.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                            <img src="assets/work/phad.jpg" width="1120" height="700" alt="" loading="lazy">
+                        </a>
+                        <div class="site__body">
+                            <h3><a href="https://phad-painting.vercel.app" target="_blank" rel="noopener">Vijay Joshi · Phad Painting</a></h3>
+                            <p class="site__meta">Folk artist · Shahpura, Rajasthan</p>
+                            <p>The story, lineage and collection of a thirteenth-generation Phad painter, with workshops and WhatsApp enquiries.</p>
+                            <a class="site__url" href="https://phad-painting.vercel.app" target="_blank" rel="noopener">phad-painting.vercel.app <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </li>
+
+                    <li class="site" data-cat="business" data-reveal>
+                        <a class="site__shot" href="https://stambh-realty.vercel.app/Home.dc.html" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                            <img src="assets/work/stambh.jpg" width="1120" height="700" alt="" loading="lazy">
+                        </a>
+                        <div class="site__body">
+                            <h3><a href="https://stambh-realty.vercel.app/Home.dc.html" target="_blank" rel="noopener">Stambh Realty</a></h3>
+                            <p class="site__meta">Residential developer · Pune</p>
+                            <p>Tower listings, a 3D building model on the home page and a site-visit booking flow.</p>
+                            <a class="site__url" href="https://stambh-realty.vercel.app/Home.dc.html" target="_blank" rel="noopener">stambh-realty.vercel.app <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </li>
+
+                    <li class="site" data-cat="community" data-reveal>
+                        <a class="site__shot" href="https://blesssing-smile-foundation.vercel.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                            <img src="assets/work/blessing.jpg" width="1120" height="700" alt="" loading="lazy">
+                        </a>
+                        <div class="site__body">
+                            <h3><a href="https://blesssing-smile-foundation.vercel.app" target="_blank" rel="noopener">Blessing Smile Foundation</a></h3>
+                            <p class="site__meta">Non-profit · Varanasi</p>
+                            <p>Food donation drives and cow welfare: programs, impact, a gallery and a donate flow with photo and video proof.</p>
+                            <a class="site__url" href="https://blesssing-smile-foundation.vercel.app" target="_blank" rel="noopener">blesssing-smile-foundation.vercel.app <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </li>
+
+                    <li class="site site--wide" data-cat="portfolio" data-reveal>
+                        <div class="site__trio">
+                            <a href="https://balaji-urban-futures.vercel.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/work/balaji-urban.jpg" width="1120" height="700" alt="" loading="lazy"></a>
+                            <a href="https://balaji-flame-delta.vercel.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/work/balaji-flame.jpg" width="1120" height="700" alt="" loading="lazy"></a>
+                            <a href="https://balaji-minimal.vercel.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/work/balaji-minimal.jpg" width="1120" height="700" alt="" loading="lazy"></a>
+                        </div>
+                        <div class="site__body">
+                            <h3>Dr. Balaji Kalluri <span class="tag">Concept</span></h3>
+                            <p class="site__meta">Academic portfolio · FLAME University, Pune</p>
+                            <p>One professor's research, publications and teaching, designed three ways so the choice is about fit, not guesswork.</p>
+                            <p class="site__links">
+                                <a class="site__url" href="https://balaji-urban-futures.vercel.app" target="_blank" rel="noopener">Immersive <span aria-hidden="true">↗</span></a>
+                                <a class="site__url" href="https://balaji-flame-delta.vercel.app" target="_blank" rel="noopener">Editorial <span aria-hidden="true">↗</span></a>
+                                <a class="site__url" href="https://balaji-minimal.vercel.app" target="_blank" rel="noopener">Minimal <span aria-hidden="true">↗</span></a>
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="site" data-cat="community" data-reveal>
+                        <a class="site__shot" href="https://azal-mehandi-art.vercel.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                            <img src="assets/work/azal.jpg" width="1120" height="700" alt="" loading="lazy">
+                        </a>
+                        <div class="site__body">
+                            <h3><a href="https://azal-mehandi-art.vercel.app" target="_blank" rel="noopener">Azal Mehandi Art</a></h3>
+                            <p class="site__meta">Henna artist · Sharjah and Dubai</p>
+                            <p>Bridal and party henna for a licensed artist who works across the UAE, with booking over WhatsApp.</p>
+                            <a class="site__url" href="https://azal-mehandi-art.vercel.app" target="_blank" rel="noopener">azal-mehandi-art.vercel.app <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </li>
+
+                    <li class="site" data-cat="portfolio" data-reveal>
+                        <a class="site__shot" href="https://www.vidit.tech/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                            <img src="assets/work/vidit.jpg" width="1120" height="700" alt="" loading="lazy">
+                        </a>
+                        <div class="site__body">
+                            <h3><a href="https://www.vidit.tech/" target="_blank" rel="noopener">Vidit Gupta</a></h3>
+                            <p class="site__meta">ML research portfolio · Mumbai</p>
+                            <p>A portfolio laid out like a research paper: abstract, publications, experience and a downloadable resume.</p>
+                            <a class="site__url" href="https://www.vidit.tech/" target="_blank" rel="noopener">vidit.tech <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </li>
+
+                    <li class="site" data-cat="community" data-reveal>
+                        <a class="site__shot" href="https://a-box-of-goodness.vercel.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                            <img src="assets/work/boxofgoodness.jpg" width="1120" height="700" alt="" loading="lazy">
+                        </a>
+                        <div class="site__body">
+                            <h3><a href="https://a-box-of-goodness.vercel.app" target="_blank" rel="noopener">A Box of Goodness</a></h3>
+                            <p class="site__meta">Volunteer-run charity · Bahrain</p>
+                            <p>How to donate or volunteer with a charity that has delivered food and toys to families and migrant workers since 2016.</p>
+                            <a class="site__url" href="https://a-box-of-goodness.vercel.app" target="_blank" rel="noopener">a-box-of-goodness.vercel.app <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </li>
+
+                    <li class="site" data-cat="business" data-reveal>
+                        <a class="site__shot" href="https://professinal-coaches.vercel.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                            <img src="assets/work/meera.jpg" width="1120" height="700" alt="" loading="lazy">
+                        </a>
+                        <div class="site__body">
+                            <h3><a href="https://professinal-coaches.vercel.app" target="_blank" rel="noopener">Meera Iyer</a> <span class="tag">Concept</span></h3>
+                            <p class="site__meta">Executive coach and corporate trainer · Pune</p>
+                            <p>Programs, coaching and speaking for an executive coach, built around one action: booking a call.</p>
+                            <a class="site__url" href="https://professinal-coaches.vercel.app" target="_blank" rel="noopener">professinal-coaches.vercel.app <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </li>
+
+                    <li class="site" data-cat="business" data-reveal>
+                        <a class="site__shot" href="https://security-rust-ten.vercel.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                            <img src="assets/work/northwatch.jpg" width="1120" height="700" alt="" loading="lazy">
+                        </a>
+                        <div class="site__body">
+                            <h3><a href="https://security-rust-ten.vercel.app" target="_blank" rel="noopener">Northwatch Security</a> <span class="tag">Concept</span></h3>
+                            <p class="site__meta">Security services</p>
+                            <p>Services, coverage and client record for a guarding company, with a form to request a site assessment.</p>
+                            <a class="site__url" href="https://security-rust-ten.vercel.app" target="_blank" rel="noopener">security-rust-ten.vercel.app <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </li>
                 </ul>
+
+                <div class="systems" data-reveal>
+                    <header class="systems__head">
+                        <p class="eyebrow">Beyond websites</p>
+                        <h2>Back ends and automations I've built.</h2>
+                    </header>
+                    <ul class="rows">
+                        <li class="row">
+                            <h3>Karta Attendance</h3>
+                            <p>An offline-first QR check-in platform for events. Check-ins are stored on the device and sync when the network returns. Includes a scanner for volunteers, a QR pass page for attendees and an admin dashboard.</p>
+                            <p class="row__stack">Python · FastAPI · offline sync</p>
+                            <p class="row__links">
+                                <a href="https://karta-attendance.vercel.app" target="_blank" rel="noopener">Scanner <span aria-hidden="true">↗</span></a>
+                                <a href="https://karta-attendance-sk4n.vercel.app" target="_blank" rel="noopener">QR pass <span aria-hidden="true">↗</span></a>
+                                <a href="https://karta-attendance-z2qd-nine.vercel.app" target="_blank" rel="noopener">Admin <span aria-hidden="true">↗</span></a>
+                                <a href="https://github.com/hkkk27/event-attendance-platform" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+                            </p>
+                        </li>
+                        <li class="row">
+                            <h3>OmniLink CRM</h3>
+                            <p>Back-end modules for a full-stack CRM: customer profiles, membership, consent workflows, timelines and audit logging, behind JWT authentication and role-based access.</p>
+                            <p class="row__stack">Python · FastAPI · REST · SQLite · JWT</p>
+                            <p class="row__links">
+                                <a href="https://github.com/hkkk27/Crm_platform" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+                            </p>
+                        </li>
+                        <li class="row">
+                            <h3>WhatsApp AI agent</h3>
+                            <p>A WhatsApp assistant that turns plain messages into notes, reminders and tasks, then syncs them to Notion.</p>
+                            <p class="row__stack">FastAPI · Twilio WhatsApp API · OpenRouter LLMs · Notion API</p>
+                            <p class="row__links">
+                                <a href="https://github.com/hkkk27/whatsapp-ai-agent" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        
-        <!-- Portfolio Items Container -->
-        <div class="row portfolio-container">
-            <!-- Portfolio Item 1 -->
-            <div class="col-lg-4 col-md-6 mb-4 portfolio-item fullstack">
-                <div class="position-relative overflow-hidden mb-2">
-                    <img class="img-fluid rounded w-100" src="img/omnilink.png" alt="OmniLink CRM">
-                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center flex-column">
-                        <a href="#" data-toggle="modal" data-target="#portfolioModal1">
-                            <i class="fa fa-plus text-white mb-2" style="font-size: 40px;"></i>
-                            <p class="text-white m-0">OmniLink CRM</p>
-                        </a>
+        </section>
+
+        <!-- Skills -->
+        <section class="section skills" id="skills" data-theme="ultra">
+            <div class="wrap">
+                <header class="section__head" data-reveal>
+                    <p class="eyebrow">Skills</p>
+                    <h2>What I work with.</h2>
+                </header>
+                <dl class="kit">
+                    <div class="kit__row" data-reveal>
+                        <dt>Websites</dt>
+                        <dd><span>HTML, CSS and JavaScript</span> <span>React</span> <span>Responsive layout</span> <span>Motion and 3D in the browser</span> <span>Vercel, Git and GitHub</span></dd>
+                    </div>
+                    <div class="kit__row" data-reveal>
+                        <dt>Back end</dt>
+                        <dd><span>Python</span> <span>FastAPI and REST APIs</span> <span>SQL and databases</span> <span>JWT auth and role-based access</span></dd>
+                    </div>
+                    <div class="kit__row" data-reveal>
+                        <dt>AI automation</dt>
+                        <dd><span>Generative AI and LLM integrations</span> <span>Twilio WhatsApp API</span> <span>Notion API</span> <span>Workflow automation</span></dd>
+                    </div>
+                    <div class="kit__row" data-reveal>
+                        <dt>Data</dt>
+                        <dd><span>Data analytics</span> <span>Power BI</span> <span>Tableau dashboards</span></dd>
+                    </div>
+                    <div class="kit__row" data-reveal>
+                        <dt>Content</dt>
+                        <dd><span>Video editing in Canva and CapCut</span> <span>A YouTube channel with 4,000+ subscribers</span></dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="section about" id="about" data-theme="paper">
+            <div class="wrap">
+                <div class="about__top">
+                    <figure class="about__photo" data-reveal>
+                        <img src="assets/harshit.jpg" width="900" height="800" alt="Harshit Singh" loading="lazy">
+                    </figure>
+                    <div data-reveal>
+                        <p class="eyebrow">About</p>
+                        <h2>Data science student, freelance web developer.</h2>
+                        <p class="about__lede">I'm a B.Sc. Data Science and Economics student at FLAME University, and I freelance as a web designer and developer. I like work that ends in something people can open and use.</p>
+                        <p>Alongside websites, I build back ends and AI automations with Python, FastAPI, databases and LLMs: a CRM platform, an offline-first event attendance system and a WhatsApp assistant.</p>
+                        <p class="about__actions">
+                            <a class="btn btn--solid" href="Harshit_CV_Data_Science.pdf" download>Download CV</a>
+                            <a class="btn btn--line" href="https://www.linkedin.com/in/harshit-singh27/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+                            <a class="btn btn--line" href="https://github.com/hkkk27" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+                        </p>
                     </div>
                 </div>
-            </div>
 
-            <!-- Portfolio Item 2 -->
-            <div class="col-lg-4 col-md-6 mb-4 portfolio-item fullstack">
-                <div class="position-relative overflow-hidden mb-2">
-                    <img class="img-fluid rounded w-100" src="img/karta.png" alt="Karta Attendance System">
-                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center flex-column">
-                        <a href="#" data-toggle="modal" data-target="#portfolioModal2">
-                            <i class="fa fa-plus text-white mb-2" style="font-size: 40px;"></i>
-                            <p class="text-white m-0">Karta Attendance System</p>
-                        </a>
+                <div class="about__cols">
+                    <div data-reveal>
+                        <h3 class="about__h">Experience</h3>
+                        <ul class="timeline">
+                            <li>
+                                <p class="timeline__when">Internship</p>
+                                <h4>IT Intern, Data Analytics and Technology</h4>
+                                <p class="timeline__where">Tata Trent Limited</p>
+                                <p>Retail analytics in Power BI across 1M+ transaction records, back-end work on a CRM platform, and a prototype AI system that suggests product placement for visual merchandising.</p>
+                            </li>
+                            <li>
+                                <p class="timeline__when">Sept 2025 to present</p>
+                                <h4>Data Analytics and Visualization Intern</h4>
+                                <p class="timeline__where">WageIndicator Foundation</p>
+                                <p>Collecting and validating multi-country socio-economic data, and designing Tableau dashboards on regional and gender-based labour market trends.</p>
+                            </li>
+                            <li>
+                                <p class="timeline__when">May to Jul 2025</p>
+                                <h4>Field Intern</h4>
+                                <p class="timeline__where">Mazdoor Kisan Shakti Sangathan (MKSS)</p>
+                                <p>Field research on social welfare schemes and rural governance across villages in Rajasthan.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div data-reveal>
+                        <h3 class="about__h">Education</h3>
+                        <ul class="timeline">
+                            <li>
+                                <p class="timeline__when">Aug 2024 to present</p>
+                                <h4>B.Sc. Data Science and Economics</h4>
+                                <p class="timeline__where">FLAME University, Pune</p>
+                                <p>GPA 8.37. 100% merit scholarship and Dean's Honor in the first year.</p>
+                            </li>
+                            <li>
+                                <p class="timeline__when">2020 to 2024</p>
+                                <h4>Secondary and senior secondary</h4>
+                                <p class="timeline__where">Jawahar Navodaya Vidyalaya, Palghar</p>
+                                <p>Grade 10: 93%. Grade 12: 79%. JNV Scholarship for Academic Excellence.</p>
+                            </li>
+                        </ul>
+
+                        <h3 class="about__h about__h--gap">Also</h3>
+                        <ul class="also">
+                            <li>Karta Catalyst Scholar, and a mentor with the Karta Initiative.</li>
+                            <li>National-level chess player. Regional volleyball and kabaddi.</li>
+                            <li>Built and monetised a YouTube channel: 4,000+ subscribers, 400K+ views.</li>
+                            <li>Ran logistics for 100+ participants in the Right to Food Campaign.</li>
+                        </ul>
                     </div>
                 </div>
-            </div>
 
-            <!-- Portfolio Item 3 -->
-            <div class="col-lg-4 col-md-6 mb-4 portfolio-item backend">
-                <div class="position-relative overflow-hidden mb-2">
-                    <img class="img-fluid rounded w-100" src="img/whatsapp_ai.png" alt="WhatsApp AI Agent">
-                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center flex-column">
-                        <a href="#" data-toggle="modal" data-target="#portfolioModal3">
-                            <i class="fa fa-plus text-white mb-2" style="font-size: 40px;"></i>
-                            <p class="text-white m-0">WhatsApp AI Agent</p>
-                        </a>
-                    </div>
+                <details class="earlier" data-reveal>
+                    <summary>Earlier coursework projects</summary>
+                    <ul>
+                        <li><strong>Sleep calculator.</strong> A small web tool that suggests bedtimes from 90-minute sleep cycles. <a href="img/sleep_calculator.html" target="_blank" rel="noopener">Open it</a></li>
+                        <li><strong>Project Safar.</strong> An advertising campaign for a women-driven cab service. <a href="img/Safar Final PPT.pdf" download>Download the deck (PDF)</a></li>
+                        <li><strong>Data collection and freedom of thought.</strong> A research essay on algorithms, autonomy and bias. <a href="img/Harshit Singh-final research paper (1).pdf" download>Download the paper (PDF)</a></li>
+                        <li><strong>Life Carrier seed starter tray.</strong> A digital marketing plan for a biodegradable product. <a href="img/Green Leaves Background Watercolor Presentation (2).pptx" download>Download the slides (PPTX)</a></li>
+                    </ul>
+                </details>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section contact" id="contact" data-theme="marigold">
+            <div class="wrap contact__grid">
+                <div data-reveal>
+                    <p class="eyebrow">Contact</p>
+                    <h2>Need a website? Tell me what it's for.</h2>
+                    <p class="contact__lede">Email me a few lines about what you need, and we can set up a 15-minute call to talk it through.</p>
+                    <ul class="contact__list">
+                        <li><span>Email</span><a href="mailto:harshit.singh@flame.edu.in">harshit.singh@flame.edu.in</a></li>
+                        <li><span>Phone</span><a href="tel:+919503560489">+91 95035 60489</a></li>
+                        <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/harshit-singh27/" target="_blank" rel="noopener">harshit-singh27</a></li>
+                        <li><span>GitHub</span><a href="https://github.com/hkkk27" target="_blank" rel="noopener">hkkk27</a></li>
+                    </ul>
                 </div>
+                <form class="form" action="https://formspree.io/f/mpwqpjdr" method="POST" data-reveal>
+                    <label>Your name
+                        <input type="text" name="name" autocomplete="name" required>
+                    </label>
+                    <label>Your email
+                        <input type="email" name="email" autocomplete="email" required>
+                    </label>
+                    <label>What do you need?
+                        <textarea name="message" rows="5" required></textarea>
+                    </label>
+                    <button class="btn btn--solid" type="submit">Send message</button>
+                </form>
             </div>
+        </section>
+    </main>
 
-            <!-- Portfolio Item 4 -->
-            <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                <div class="position-relative overflow-hidden mb-2">
-                    <img class="img-fluid rounded w-100" src="img/Screenshot 2025-01-29 234222.png" alt="Project 1">
-                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center flex-column">
-                        <a href="#" data-toggle="modal" data-target="#portfolioModal4">
-                            <i class="fa fa-plus text-white mb-2" style="font-size: 40px;"></i>
-                            <p class="text-white m-0">Click Here</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Portfolio Item 5 -->
-            <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                <div class="position-relative overflow-hidden mb-2">
-                    <img class="img-fluid rounded w-100" src="img/Screenshot 2025-01-30 044451.png" alt="Project 2">
-                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center flex-column">
-                        <a href="#" data-toggle="modal" data-target="#portfolioModal5">
-                            <i class="fa fa-plus text-white mb-2" style="font-size: 40px;"></i>
-                            <p class="text-white m-0">Click Here</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Portfolio Item 6 -->
-            <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
-                <div class="position-relative overflow-hidden mb-2">
-                    <img class="img-fluid rounded w-100" src="img/researchphoto.jpg" alt="Project 3">
-                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center flex-column">
-                        <a href="#" data-toggle="modal" data-target="#portfolioModal6">
-                            <i class="fa fa-plus text-white mb-2" style="font-size: 40px;"></i>
-                            <p class="text-white m-0">Click Here</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Portfolio Item 7 -->
-            <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                <div class="position-relative overflow-hidden mb-2">
-                    <img class="img-fluid rounded w-100" src="img/Screenshot 2025-01-30 051130.png" alt="Project 4">
-                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center flex-column">
-                        <a href="#" data-toggle="modal" data-target="#portfolioModal7">
-                            <i class="fa fa-plus text-white mb-2" style="font-size: 40px;"></i>
-                            <p class="text-white m-0">Click Here</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-12 text-center">
-                <button id="show-more-projects" class="btn btn-outline-primary shadow">Show More</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modals -->
-<!-- Modal 1 -->
-<div class="modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModalLabel1" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="portfolioModalLabel1">OmniLink CRM</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <img class="img-fluid rounded mb-4" src="img/omnilink.png" alt="OmniLink CRM">
-                <div class="mb-4">
-                    <h6 class="text-primary">Customer Relationship Management Platform</h6>
-                    <p align="justify">
-                        Contributed to a full-stack CRM platform integrating Customer 360, dashboards, loyalty, consent, and customer service. Developed backend modules using Python, FastAPI, REST APIs, JWT authentication, and role-based access control. Implemented customer profiles, membership, consent workflows, timelines, and audit logging with SQLite.
-                    </p>
-                </div>
-                <div class="text-center">
-                    <a href="https://github.com/hkkk27/Crm_platform" target="_blank" class="btn btn-primary">
-                        <i class="fab fa-github mr-2"></i>View on GitHub
-                    </a>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal 2 -->
-<div class="modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModalLabel2" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="portfolioModalLabel2">Karta Attendance System</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <img class="img-fluid rounded mb-4" src="img/karta.png" alt="Karta Attendance System">
-                <div class="mb-4">
-                    <h6 class="text-primary">Offline-First Event Manager</h6>
-                    <p align="justify">
-                        Built an offline-resilient QR attendance platform with a Python/FastAPI backend and database integration. Implemented offline check-ins with local storage and automatic synchronization after network recovery. Developed backend APIs and an admin dashboard for attendance, university demographics, and event logistics.
-                    </p>
-                </div>
-                <div class="text-center">
-                    <a href="https://github.com/hkkk27/event-attendance-platform" target="_blank" class="btn btn-primary">
-                        <i class="fab fa-github mr-2"></i>View on GitHub
-                    </a>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal 3 -->
-<div class="modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModalLabel3" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="portfolioModalLabel3">WhatsApp AI Agent</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <img class="img-fluid rounded mb-4" src="img/whatsapp_ai.png" alt="WhatsApp AI Agent">
-                <div class="mb-4">
-                    <h6 class="text-primary">LLM Workflow Automation</h6>
-                    <p align="justify">
-                        Built an AI-powered WhatsApp assistant for converting natural-language messages into notes, reminders, and tasks. Integrated Python/FastAPI with Twilio WhatsApp API, OpenRouter LLMs, and Notion API. Automated message classification, task extraction, reminder handling, and synchronization with external services.
-                    </p>
-                </div>
-                <div class="text-center">
-                    <a href="https://github.com/hkkk27/whatsapp-ai-agent" target="_blank" class="btn btn-primary">
-                        <i class="fab fa-github mr-2"></i>View on GitHub
-                    </a>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal 4 -->
-<div class="modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-labelledby="portfolioModalLabel4" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="portfolioModalLabel4">Sleep Calculator</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <img class="img-fluid rounded mb-4" src="img/Screenshot 2025-01-29 234222.png" alt="Sleep calculator">
-                <div class="mb-4">
-                    <h6 class="text-primary">Project Overview</h6>
-                    <p align="justify">
-                        This Sleep Time Calculator is a web-based tool that helps users determine the best times to go to bed in order to wake up feeling refreshed. The tool calculates sleep times based on a user's desired wake-up time, considering the sleep cycle duration of 90 minutes. It provides multiple sleep time options, ranging from 1 to 6 complete sleep cycles, to ensure users can align their sleep schedule with optimal rest periods.</p>
-                    <p><b>Features:</b><br>
-                        1. User Input: Users enter their wake-up time in a 24-hour format.<br>
-                        2. Sleep Cycle Calculation: The tool calculates sleep times based on 90-minute cycles.<br>
-                        3. Multiple Sleep Options: It provides suggestions for when to fall asleep to complete a full sleep cycle before waking up.<br>
-                        4. Output Display: The results are shown in a list format for easy understanding, offering users different sleep time options.</p>
-                    <p>The design is user-friendly, with a modern, clean interface featuring dark-themed colors and easy-to-read typography. The tool is meant to assist users in improving their sleep habits by calculating the best sleep times to optimize their rest.</p>
-                </div>
-                <div class="text-center">
-                    <h6 class="text-primary mb-3">Download the sleep calculator</h6>
-                    <a href="img/sleep_calculator.html" class="btn btn-primary" download>
-                        <i class="fa fa-download mr-2"></i>Download
-                    </a>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal 5 -->
-<div class="modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-labelledby="portfolioModalLabel5" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="portfolioModalLabel5">Project Safar</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <img class="img-fluid rounded mb-4" src="img/Screenshot 2025-01-30 044451.png" alt="Project Safar">
-                <div class="mb-4">
-                    <h6 class="text-primary">Project Details</h6>
-                    <p align="justify">
-                        This project is an advertising campaign for an idea we developed: "Safar," a women-driven cab service designed to ensure safer transportation for female passengers. The campaign was part of our advertising class, where we researched the challenges women face with public transportation. Based on our findings, we focused on addressing the demand for additional safety features such as GPS tracking and emergency buttons. The goal of this project was to create an ad concept that would effectively communicate the need for safer transportation options for women.
-                    </p>
-                </div>
-                <div class="text-center">
-                    <h6 class="text-primary mb-3">Download the project</h6>
-                    <a href="img/Safar Final PPT.pdf" class="btn btn-primary" download>
-                        <i class="fa fa-download mr-2"></i>Download PDF
-                    </a>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal 6 -->
-<div class="modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-labelledby="portfolioModalLabel6" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="portfolioModalLabel6">Research Essay</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <img class="img-fluid rounded mb-4" src="img/researchphoto.jpg" alt="Research Project">
-                <div class="mb-4">
-                    <h6 class="text-primary">Project Overview</h6>
-                    <p align="justify">
-                        <b>Research on Data Collection and Its Impact on Freedom of Thought</b>
-                    </p>
-                    <p>I conducted research exploring how data collection in today's digital age impacts individual autonomy and reinforces societal biases. The study examined how personal data is used by corporations to predict and influence consumer behavior, as well as its effects on political decision-making. By analyzing the role of algorithms, AI, and neuromarketing, my research highlighted the growing risks posed by unchecked data collection, including the reinforcement of existing inequalities and the creation of echo chambers. This project aims to raise awareness about the ethical concerns surrounding data use and the importance of regulating it.</p>
-                </div>
-                <div class="text-center">
-                    <h6 class="text-primary mb-3">Download Research Paper</h6>
-                    <a href="img/Harshit Singh-final research paper (1).pdf" class="btn btn-primary" download>
-                        <i class="fa fa-download mr-2"></i>Download PDF
-                    </a>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal 7 -->
-<div class="modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-labelledby="portfolioModalLabel7" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="portfolioModalLabel7">Seed Starter Tray</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <img class="img-fluid rounded mb-4" src="img/Screenshot 2025-01-30 051130.png" alt="group project">
-                <div class="mb-4">
-                    <h6 class="text-primary">Project Details</h6>
-                    <p align="justify">
-                        <strong>Project Description: Life Carrier – Seed Starter Tray & Seedling Planter</strong><br>
-                        For my digital marketing class, I developed a comprehensive marketing strategy for <em>Life Carrier</em>, an eco-friendly seed starter tray made from biodegradable materials. The project involved researching and analyzing sustainable consumer behavior, crafting a brand positioning statement, and creating a digital marketing plan.</p>
-                    <p><strong>What I Did:</strong><br>
-                        - Designed an eco-conscious brand identity, including the product's name, logo, and tagline.<br>
-                        - Defined the target audience and developed consumer personas to tailor marketing efforts.<br>
-                        - Formulated digital marketing objectives and strategies to raise brand awareness and increase conversions.<br>
-                        - Planned a creative brief, influencer program, and digital ad campaigns to engage customers through social media platforms.<br>
-                        - Created a website concept with interactive features to educate and engage users.</p>
-                    <p><strong>What I Learned:</strong><br>
-                        - The importance of sustainability in product design and how it aligns with consumer values.<br>
-                        - How to create a comprehensive digital marketing plan, from identifying target segments to setting KPIs.<br>
-                        - The effectiveness of using digital platforms, influencers, and creative campaigns in promoting eco-friendly products.<br>
-                        - The significance of building a brand with strong values to appeal to conscious consumers.</p>
-                </div>
-                <div class="text-center">
-                    <h6 class="text-primary mb-3">Download Project Files</h6>
-                    <a href="img/Green Leaves Background Watercolor Presentation (2).pptx" class="btn btn-primary" download>
-                        <i class="fa fa-download mr-2"></i>Download Files
-                    </a>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<style>
-    .portfolio-container {
-        transition: .5s;
-        margin: 0 -15px;
-    }
-
-    .portfolio-item {
-        padding: 0 15px;
-    }
-
-    .portfolio-btn {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background: rgba(0, 0, 0, 0.7);
-        opacity: 0;
-        transition: 0.5s;
-        cursor: pointer;
-    }
-
-    .portfolio-btn:hover {
-        opacity: 1;
-    }
-
-    .portfolio-btn a {
-        color: #ffffff;
-        text-decoration: none;
-        text-align: center;
-    }
-
-    .portfolio-btn p {
-        font-size: 18px;
-        font-weight: 500;
-        margin-top: 8px;
-    }
-
-    .modal-body img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .modal-body p {
-        line-height: 1.8;
-    }
-
-    .btn-primary:hover {
-        transform: scale(1.05);
-        transition: transform 0.3s ease;
-    }
-
-    .portfolio-btn:hover i,
-    .portfolio-btn:hover p {
-        animation: bounce 0.5s;
-    }
-
-    @keyframes bounce {
-        0%, 100% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-5px);
-        }
-    }
-
-    #portfolio-flters {
-        padding: 0;
-        margin: 0;
-    }
-
-    #portfolio-flters li {
-        cursor: pointer;
-        display: inline-block;
-        margin: 10px 5px;
-        font-size: 15px;
-        font-weight: 500;
-        line-height: 1;
-        transition: all 0.3s ease-in-out;
-    }
-
-    #portfolio-flters li:hover,
-    #portfolio-flters li.active {
-        color: #ffffff;
-        background: #0BCEAF;
-    }
-
-    .modal-content {
-        border-radius: 8px;
-    }
-
-    .modal-header {
-        border-bottom: 1px solid #dee2e6;
-        background-color: #f8f9fa;
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
-    }
-
-    .modal-footer {
-        border-top: 1px solid #dee2e6;
-        background-color: #f8f9fa;
-        border-bottom-left-radius: 8px;
-        border-bottom-right-radius: 8px;
-    }
-
-    .btn-primary {
-        transition: all 0.3s ease;
-    }
-
-    .btn-primary:hover {
-        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    }
-
-    @media (max-width: 768px) {
-        .portfolio-btn p {
-            font-size: 16px;
-        }
-        
-        .portfolio-btn i {
-            font-size: 30px !important;
-        }
-
-        #portfolio-flters li {
-            font-size: 14px;
-            margin: 5px 3px;
-        }
-    }
-
-    .portfolio-item img {
-        transition: transform 0.3s ease;
-    }
-
-    .portfolio-item:hover img {
-        transform: scale(1.05);
-    }
-
-    .modal.fade .modal-dialog {
-        transition: transform 0.3s ease-out;
-    }
-
-    .modal.show .modal-dialog {
-        transform: none;
-    }
-</style>
-
-<script>
-    $(document).ready(function() {
-        $('.portfolio-btn a').click(function(e) {
-            e.preventDefault();
-            $($(this).data('target')).modal('show');
-        });
-
-        $('.modal').on('show.bs.modal', function () {
-            $(this).fadeIn();
-        });
-
-        $('.btn-primary').hover(
-            function() { $(this).addClass('shadow'); },
-            function() { $(this).removeClass('shadow'); }
-        );
-
-        // Initialize isotope for filtering and Show More logic
-        var $grid = $('.portfolio-container');
-        var initialItems = 3;
-        var showMore = false;
-
-        // Hide items beyond initial limit initially
-        $('.portfolio-item').each(function(i) {
-            if (i >= initialItems) {
-                $(this).addClass('hide-item');
-            }
-        });
-
-        $grid.isotope({
-            itemSelector: '.portfolio-item',
-            layoutMode: 'fitRows',
-            filter: function() {
-                if (showMore) {
-                    return true;
-                }
-                return !$(this).hasClass('hide-item');
-            }
-        });
-
-        $('#show-more-projects').on('click', function() {
-            showMore = !showMore;
-            $(this).text(showMore ? 'Show Less' : 'Show More');
-            
-            var currentFilter = $('#portfolio-flters li.active').data('filter');
-            $grid.isotope({
-                filter: function() {
-                    var isVisible = showMore ? true : !$(this).hasClass('hide-item');
-                    if (currentFilter === '*') {
-                        return isVisible;
-                    }
-                    return isVisible && $(this).is(currentFilter);
-                }
-            });
-        });
-
-        $('#portfolio-flters li').on('click', function () {
-            $("#portfolio-flters li").removeClass('active');
-            $(this).addClass('active');
-
-            var filterValue = $(this).data('filter');
-            $grid.isotope({
-                filter: function() {
-                    var isVisible = showMore ? true : !$(this).hasClass('hide-item');
-                    if (filterValue === '*') {
-                        return isVisible;
-                    }
-                    return isVisible && $(this).is(filterValue);
-                }
-            });
-        });
-    });
-</script>
-
-<style>
-    .hide-item {
-        display: none;
-    }
-</style>
-
-    <!-- Testimonial Start -->
-  <!-- <div class="container-fluid py-5" id="testimonial">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Review</h1>
-                <h1 class="position-absolute text-uppercase text-primary">Clients Say</h1>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="owl-carousel testimonial-carousel">
-                        <div class="text-center">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet accusam amet eirmod eos, labore diam clita</h4>
-                            <img class="img-fluid rounded-circle mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;">
-                            <h5 class="font-weight-bold m-0">Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                        <div class="text-center">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet accusam amet eirmod eos, labore diam clita</h4>
-                            <img class="img-fluid rounded-circle mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;">
-                            <h5 class="font-weight-bold m-0">Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                        <div class="text-center">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet accusam amet eirmod eos, labore diam clita</h4>
-                            <img class="img-fluid rounded-circle mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;">
-                            <h5 class="font-weight-bold m-0">Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Testimonial End -->
-
-
-    <!-- Blog section removed -->
-
-
-    <!-- Contact Start -->
- <div class="container-fluid py-5" id="contact">
-    <div class="container">
-        <div class="position-relative d-flex align-items-center justify-content-center">
-            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Contact</h1>
-            <h1 class="position-absolute text-uppercase text-primary">Contact Me</h1>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="contact-form text-center">
-                    <!-- Replace YOUR_EMAIL@gmail.com with your actual email -->
-                    <form action="https://formspree.io/f/mpwqpjdr" method="POST">
-                        <div class="form-row">
-                            <div class="control-group col-sm-6">
-                                <input type="text" class="form-control p-4" name="name" placeholder="Your Name" required />
-                            </div>
-                            <div class="control-group col-sm-6">
-                                <input type="email" class="form-control p-4" name="email" placeholder="Your Email" required />
-                            </div>
-                        </div>
-                        <div class="control-group">
-                            <input type="text" class="form-control p-4" name="subject" placeholder="Subject" required />
-                        </div>
-                        <div class="control-group">
-                            <textarea class="form-control py-3 px-4" rows="5" name="message" placeholder="Message" required></textarea>
-                        </div>
-                        <div>
-                            <button class="btn btn-outline-primary" type="submit">Send Message</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-    <!-- Contact End -->
-
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
-        <div class="container text-center py-5">
-            <div class="d-flex justify-content-center mb-4">
-                <a class="btn btn-light btn-social mr-2" href="https://www.youtube.com/@btnks99999"><i class="fab fa-youtube"></i></a>
-
-                <a class="btn btn-light btn-social mr-2" href="https://www.facebook.com/btnksstudies/"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/harshit-singh-15833b29a/"><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-light btn-social" href="https://www.instagram.com/btnks_studies/"><i class="fab fa-instagram"></i></a>
-            </div>
-            <div class="d-flex justify-content-center mb-3">
-                 <a class="text-white" href="privacy.html">Privacy</a>
-                 <span class="px-3">|</span>
-                 <a class="text-white" href="terms.html">Terms</a>
-                 <span class="px-3">|</span>
-                 <a class="text-white" href="faq.html">FAQs</a>
-                 <span class="px-3">|</span>
-                 <a class="text-white" href="help.html">Help</a>
-            </div>
-            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">MyE-Portfolio</a>. All Rights Reserved. Designed by <a class="text-white font-weight-bold" href="https://www.free-css.com/free-css-templates/page295/guarder">Harshit Singh</a>
+    <footer class="footer" data-theme="marigold">
+        <div class="wrap footer__in">
+            <p>© 2026 Harshit Singh. Designed and built in Pune.</p>
+            <p class="footer__links">
+                <a href="https://www.linkedin.com/in/harshit-singh27/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/hkkk27" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.youtube.com/@btnks99999" target="_blank" rel="noopener">YouTube</a>
+                <a href="#top">Back to top</a>
             </p>
         </div>
-    </div>
-    <!-- Footer End -->
+    </footer>
 
-    <!-- Scroll to Bottom -->
-    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/typed/typed.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="assets/js/land.js"></script>
+    <script src="assets/js/site.js"></script>
 </body>
 
 </html>
