@@ -1,0 +1,145 @@
+{
+  "slug": "deblina-raychaudhuri",
+  "name": "Deblina Raychaudhuri",
+  "role": "Assistant Professor of Biology",
+  "department": "Biology",
+  "university": "Ashoka University",
+  "location": "",
+  "tagline": "Dr. Raychaudhuri’s research focuses on human cancer immunology with a particular emphasis on understanding host-immune-tumor interactions to develop more effective and personalized cancer therapies.",
+  "photo": "/photos/deblina-raychaudhuri.jpg",
+  "bio": [
+    "Deblina Raychaudhuri is an Assistant Professor of Biology at Ashoka University. She completed her Integrated Bachelors and Masters degree in Biotechnology from St. Xavier’s College (University of Calcutta), Kolkata and earned her Ph.D. in Immunology from the CSIR-Indian Institute of Chemical Biology, Kolkata. Before joining Ashoka, she was a postdoctoral fellow at the MD Anderson Cancer Center, Houston, USA.",
+    "Dr. Raychaudhuri’s research focuses on human cancer immunology with a particular emphasis on understanding host-immune-tumor interactions to develop more effective and personalized cancer therapies. Her work explores how the different components of the tumor microenvironment shape tumor evolution, immune evasion and resistance to therapy. By integrating multi-omics approaches, her lab aims to uncover new mechanisms driving cancer progression and identify novel therapeutic targets. Ultimately, her research seeks to improve the efficacy of cancer immunotherapies, especially for patients in India, and to guide the development of tailored treatment strategies."
+  ],
+  "interests": [
+    "Immunology",
+    "Cancer Immunotherapy",
+    "Epigenetics"
+  ],
+  "positions": [
+    {
+      "title": "Assistant Professor of Biology",
+      "org": "Ashoka University"
+    },
+    {
+      "title": "postdoctoral fellow",
+      "org": "MD Anderson Cancer Center, Houston, USA"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Integrated Bachelors and Masters degree in Biotechnology",
+      "org": "St. Xavier’s College (University of Calcutta), Kolkata"
+    },
+    {
+      "degree": "Ph.D. in Immunology",
+      "org": "CSIR-Indian Institute of Chemical Biology, Kolkata"
+    }
+  ],
+  "publications": [
+    {
+      "title": "Histone lactylation drives CD8+ T cell metabolism and function",
+      "authors": "Raychaudhuri D, Singh P, Chakraborty B, Hennessey M, Tannir AJ, Byregowda S, Natarajan SM, Trujillo-Ocampo A, Im JS, Goswami S",
+      "venue": "Nature Immunology",
+      "year": "2024"
+    },
+    {
+      "title": "Myeloid-specific KDM6B inhibition sensitizes glioblastoma to PD1 blockade",
+      "authors": "Goswami S*, Raychaudhuri D*, Singh, P*. Natarajan SM*, Chen Y, Poon C, Hennessey M, Tannir AJ, Zhang J, Anandhan S, Kerrigan BP, Macaluso MD, He Z, Jindal S, Lang FF, Basu S, Sharma P",
+      "venue": "Nature Cancer",
+      "year": "2023"
+    },
+    {
+      "title": "Immune checkpoint therapy-current perspectives and future directions",
+      "authors": "Sharma P, Goswami S, Raychaudhuri D, Siddiqui B.A, Singh P, Nagarajan A, Liu J, Subudhi S.K, Poon C, Gant K.L, et al.",
+      "venue": "Cell",
+      "year": "2023"
+    },
+    {
+      "title": "Circulating Interleukin-8 Dynamics Parallels Disease Course and Is Linked to Clinical Outcomes in Severe COVID-19",
+      "authors": "D’Rozario R*, Raychaudhuri D*, Bandopadhyay P*, Sarif J*, Mehta P*, Liu CSC, Sinha BP, Roy J, Bhaduri R, Das M, et al.",
+      "venue": "Viruses",
+      "year": "2023"
+    },
+    {
+      "title": "Myeloid cell-targeted therapies for solid tumours",
+      "authors": "Goswami S, Anandhan S, Raychaudhuri D, Sharma P",
+      "venue": "Nature Reviews Immunology",
+      "year": "2022"
+    },
+    {
+      "title": "Clinical Trial Subgroup Analyses to Investigate Clinical and Immunological Outcomes of Convalescent Plasma Therapy in Severe COVID-19",
+      "authors": "Raychaudhuri D, Bandopadhyay P, D’Rozario R, Sarif J, Ray Y, Paul SR, Singh P, Chaudhuri K, Bhaduri R, Pandey et al.",
+      "venue": "Mayo Clin Proc IQ&O",
+      "year": "2022"
+    },
+    {
+      "title": "A phase 2 single center open label randomised control trial for convalescent plasma therapy in patients with severe COVID-19",
+      "authors": "Ray Y, Paul SR, Bandopadhyay P, D’Rozario R, Sarif J, Raychaudhuri D, Bhowmik D, Lahiri A, Vasudevan JS et al.",
+      "venue": "Nature Communications",
+      "year": "2022"
+    },
+    {
+      "title": "Plasma Gradient of Soluble Urokinase-Type Plasminogen Activator Receptor Is Linked to Pathogenic Plasma Proteome and Immune Transcriptome and Stratifies Outcomes in Severe COVID-19",
+      "authors": "Sarif J*, Raychaudhuri D*, D’Rozario R*, Bandopadhyay P*, Singh P*, Mehta P*, Hoque MA, Sinha BP, Kushwaha M, Sahni S, Devi P, Chattopadhyay P, Paul SR, Ray Y et al.",
+      "venue": "Frontiers in Immunology",
+      "year": "2021"
+    },
+    {
+      "title": "Systematic Optimization of Potent and Orally Bioavailable Purine Scaffold as a Dual Inhibitor of Toll-Like Receptors 7 and 9",
+      "authors": "Kundu B*, Raychaudhuri D*, Mukherjee A*, Sinha BP*, Sarkar D, Bandopadhyay P, Pal S, Das N, Dey D et al.",
+      "venue": "Journal of Medicinal Chemistry",
+      "year": "2021"
+    },
+    {
+      "title": "A Chemical Switch for Transforming a Purine Agonist for Toll-like Receptor 7 to a Clinically Relevant Antagonist",
+      "authors": "Mukherjee A*, Raychaudhuri D*, Sinha BP*, Kundu B, Mitra M, Paul B, Bandopadhyay P, Ganguly D, Talukdar A",
+      "venue": "Journal of Medicinal Chemistry",
+      "year": "2020"
+    },
+    {
+      "title": "Role of Ca2+ in toll- like receptor 9 activation in human plasmacytoid dendritic cells",
+      "authors": "Raychaudhuri D#, Duttagupta P, CSC Liu, Sarif J, Ghosh AR, Rahaman O, Ganguly D#",
+      "venue": "Cytokine",
+      "year": "2020"
+    },
+    {
+      "title": "Lactate Induces Pro-tumor Reprogramming in Intratumoral Plasmacytoid dendritic Cells",
+      "authors": "Raychaudhuri D, Bhattacharya R, Sinha BP, CSC Liu, Ghosh AR, Rahaman O, Bandopadhyay P, Sarif J, D’Rozario R, Paul S, Das A, Sarkar DK, Chattopadhyay S, Ganguly D",
+      "venue": "Frontiers in Immunology",
+      "year": "2019"
+    },
+    {
+      "title": "Cutting edge: Piezo1 mechanosensors optimize human T cell activation",
+      "authors": "CSC Liu, D Raychaudhuri, B Paul, Y Chakrabarty, AR Ghosh, ...",
+      "venue": "The Journal of Immunology",
+      "year": "2018"
+    },
+    {
+      "title": "Adipose recruitment and activation of plasmacytoid dendritic cells fuel metaflammation",
+      "authors": "AR Ghosh, R Bhattacharya, S Bhattacharya, T Nargis, O Rahaman, ...",
+      "venue": "Diabetes",
+      "year": "2016"
+    }
+  ],
+  "teaching": [],
+  "awards": [],
+  "sections": [],
+  "metrics": {
+    "citations": "2653",
+    "h_index": "14"
+  },
+  "contact": {
+    "email": "deblina.raychaudhuri@ashoka.edu.in",
+    "phone": "",
+    "office": ""
+  },
+  "links": {
+    "profile": "",
+    "scholar": "",
+    "orcid": "",
+    "linkedin": "",
+    "website": ""
+  },
+  "sources": []
+}

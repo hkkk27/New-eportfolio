@@ -1,0 +1,189 @@
+{
+  "slug": "kedar-natarajan",
+  "name": "Kedar Natarajan",
+  "role": "Professor",
+  "department": "",
+  "university": "Ashoka University",
+  "location": "",
+  "tagline": "Dr. Natarajan is a Computational Biologist investigating the fundamental principles of cellular decision-making and tissue organization through the lens of stem cell biology.",
+  "photo": "/photos/kedar-natarajan.webp",
+  "bio": [
+    "Dr. Natarajan is a Computational Biologist investigating the fundamental principles of cellular decision-making and tissue organization through the lens of stem cell biology.",
+    "The research group integrates single-cell multi-omics and spatial transcriptomics to map the regulatory landscapes governing cell fate and lineage commitment.",
+    "By developing novel computational frameworks, the lab aims to decode how transcriptional regulation and molecular crosstalk define cellular identity and function within complex tissue environments."
+  ],
+  "interests": [
+    "Cellular decision-making",
+    "Tissue organization",
+    "Stem cell biology",
+    "Single-cell multi-omics",
+    "Spatial transcriptomics",
+    "Cell fate",
+    "Lineage commitment",
+    "Transcriptional regulation",
+    "Molecular crosstalk",
+    "Cellular identity and function"
+  ],
+  "positions": [],
+  "education": [
+    {
+      "degree": "PhD",
+      "org": "Imperial College London"
+    }
+  ],
+  "publications": [
+    {
+      "title": "Comparative analysis of plate-based scRNA-seq approaches",
+      "authors": "Natarajan KN",
+      "venue": "Meth. Mol. Biology",
+      "year": "2026"
+    },
+    {
+      "title": "Inferring large networks with matrix factorisation to capture non-linear dependencies among genes using sparse single-cell profiles",
+      "authors": "Jha, IP, et al., Natarajan KN Kumar V",
+      "venue": "bioRxiv",
+      "year": "2026",
+      "url": "doi: 10.64898/2026.03.08.710347"
+    },
+    {
+      "title": "Exploration of cell state heterogeneity using single-cell proteomics through sensitivity-tailored data-independent acquisition",
+      "authors": "V Petrosius, P Aragon-Fernandez, N Üresin, G Kovacs, T Phlairaharn, ...",
+      "venue": "Nature communications",
+      "year": "2023"
+    },
+    {
+      "title": "TENET: gene network reconstruction using transfer entropy reveals key regulatory factors from single cell transcriptomic data",
+      "authors": "J Kim, S T. Jakobsen, KN Natarajan, KJ Won",
+      "venue": "Nucleic acids research",
+      "year": "2021"
+    },
+    {
+      "title": "Single-cell RNA-sequencing of differentiating iPS cells reveals dynamic genetic effects on gene expression",
+      "authors": "ASE Cuomo, DD Seaton, DJ McCarthy, I Martinez, MJ Bonder, ...",
+      "venue": "Nature communications",
+      "year": "2020"
+    },
+    {
+      "title": "SBML Level 3: an extensible format for the exchange and reuse of biological models",
+      "authors": "SM Keating, D Waltemath, M König, F Zhang, A Dräger, C Chaouiya, ...",
+      "venue": "Molecular systems biology",
+      "year": "2020"
+    },
+    {
+      "title": "Transcriptional dynamics of hepatic sinusoid‐associated cells after liver injury",
+      "authors": "MK Terkelsen, SM Bendixen, D Hansen, EAH Scott, AF Moeller, ...",
+      "venue": "Hepatology",
+      "year": "2020"
+    },
+    {
+      "title": "Single-cell transcriptomics identifies CD44 as a marker and regulator of endothelial to haematopoietic transition",
+      "authors": "M Oatley, ÖV Bölükbası, V Svensson, M Shvartsman, K Ganter, K Zirngibl, ...",
+      "venue": "Nature communications",
+      "year": "2020"
+    },
+    {
+      "title": "The Malaria Cell Atlas: Single parasite transcriptomes across the complete Plasmodium life cycle",
+      "authors": "VM Howick, AJC Russell, T Andrews, H Heaton, AJ Reid, K Natarajan, ...",
+      "venue": "Science",
+      "year": "2019"
+    },
+    {
+      "title": "Comparative analysis of sequencing technologies for single-cell transcriptomics",
+      "authors": "KN Natarajan, Z Miao, M Jiang, X Huang, H Zhou, J Xie, C Wang, S Qin, ...",
+      "venue": "Genome Biology",
+      "year": "2019"
+    },
+    {
+      "title": "Single-cell tagged reverse transcription (STRT-Seq)",
+      "authors": "KN Natarajan",
+      "venue": "Single Cell Methods: Sequencing and Proteomics",
+      "year": "2019"
+    },
+    {
+      "title": "A rapid and robust method for single cell chromatin accessibility profiling",
+      "authors": "X Chen, RJ Miragaia, KN Natarajan, SA Teichmann",
+      "venue": "Nature communications",
+      "year": "2018"
+    },
+    {
+      "title": "Genome-wide analyses reveal the IRE1a-XBP1 pathway promotes T helper cell differentiation by resolving secretory stress and accelerating proliferation",
+      "authors": "J Pramanik, X Chen, G Kar, J Henriksson, T Gomes, JE Park, K Natarajan, ...",
+      "venue": "Genome medicine",
+      "year": "2018"
+    },
+    {
+      "title": "Distinctive features of lincRNA gene expression suggest widespread RNA-independent functions",
+      "authors": "AC Tuck, KN Natarajan, GM Rice, J Borawski, F Mohn, A Rankova, ...",
+      "venue": "Life science alliance",
+      "year": "2018"
+    },
+    {
+      "title": "SC3: consensus clustering of single-cell RNA-seq data",
+      "authors": "VY Kiselev, K Kirschner, MT Schaub, T Andrews, A Yiu, T Chandra, ...",
+      "venue": "Nature methods",
+      "year": "2017"
+    },
+    {
+      "title": "Power analysis of single-cell RNA-sequencing experiments",
+      "authors": "V Svensson, KN Natarajan, LH Ly, RJ Miragaia, C Labalette, IC Macaulay, ...",
+      "venue": "Nature methods",
+      "year": "2017"
+    },
+    {
+      "title": "Flipping between Polycomb repressed and active transcriptional states introduces noise in gene expression",
+      "authors": "G Kar, JK Kim, AA Kolodziejczyk, KN Natarajan, E Torlai Triglia, B Mifsud, ...",
+      "venue": "Nature communications",
+      "year": "2017"
+    },
+    {
+      "title": "Single-cell analysis of CD4+ T-cell differentiation reveals three major cell states and progressive acceleration of proliferation",
+      "authors": "V Proserpio, A Piccolo, L Haim-Vilmovsky, G Kar, T Lönnberg, ...",
+      "venue": "Genome biology",
+      "year": "2016"
+    },
+    {
+      "title": "Computational analysis of cell-to-cell heterogeneity in single-cell RNA-sequencing data reveals hidden subpopulations of cells",
+      "authors": "F Buettner, KN Natarajan, FP Casale, V Proserpio, A Scialdone, FJ Theis, ...",
+      "venue": "Nature biotechnology",
+      "year": "2015"
+    },
+    {
+      "title": "Single cell RNA-sequencing of pluripotent states unlocks modular transcriptional variation",
+      "authors": "AA Kolodziejczyk, JK Kim, JCH Tsang, T Ilicic, J Henriksson, ...",
+      "venue": "Cell stem cell",
+      "year": "2015"
+    },
+    {
+      "title": "Computational assignment of cell-cycle stage from single-cell transcriptome data",
+      "authors": "A Scialdone, KN Natarajan, LR Saraiva, V Proserpio, SA Teichmann, ...",
+      "venue": "Methods",
+      "year": "2015"
+    },
+    {
+      "title": "BioModels: ten-year anniversary",
+      "authors": "V Chelliah, N Juty, I Ajmera, R Ali, M Dumousseau, M Glont, M Hucka, ...",
+      "venue": "Nucleic acids research",
+      "year": "2015"
+    }
+  ],
+  "teaching": [
+    "BioStats & Bioinformatics",
+    "Single-cell technologies"
+  ],
+  "awards": [],
+  "sections": [],
+  "metrics": {},
+  "contact": {
+    "email": "kedar.natarajan@ashoka.edu.in",
+    "phone": "",
+    "office": ""
+  },
+  "links": {
+    "profile": "",
+    "scholar": "",
+    "orcid": "",
+    "linkedin": "",
+    "website": ""
+  },
+  "sources": []
+}

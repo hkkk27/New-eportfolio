@@ -1,0 +1,170 @@
+{
+  "slug": "sourav-chatterjee",
+  "name": "Sourav Chatterjee",
+  "role": "Assistant Professor of Chemistry",
+  "department": "Chemistry",
+  "university": "Ashoka University",
+  "location": "",
+  "tagline": "At Ashoka University, Sourav’s current research emphasizes chemical science at the interface of chemistry and biology.",
+  "photo": "/photos/sourav-chatterjee.jpg",
+  "bio": [
+    "Sourav obtained his doctoral degree in 2017 from CSIR-Indian Institute of Chemical Biology in Kolkata, India. During his doctoral tenure, he worked on developing phosphoric acid-based chiral organocatalysts, where his work centered on elucidating novel reaction methodologies to induce point chirality and axial chirality in molecular systems anchored in indole and pyrrole frameworks.",
+    "After his Ph.D., Sourav had opportunities to pursue postdoctoral research experience at (1) Jawaharlal Nehru Centre for Advanced Scientific Research, Bangalore, India, (2) The Scripps Research Institute, Florida, USA and (3) University of Minnesota, Minneapolis, USA. These postdoctoral trainings propelled his expertise in bridging the realms of chemistry and biology, with a specific focus on elucidating disease-associated biological conundrums through advanced chemical approaches.",
+    "At Ashoka University, Sourav’s current research emphasizes chemical science at the interface of chemistry and biology. His lab leverages synthetic chemistry to address important biomedical problems. Majorly the lab focuses on crafting chemical biology tools through the scalpel of small molecule modulators to regulate the activity and function of target proteins therapeutically relevant in cancer, intestinal inflammation, and viral infection.",
+    "Using advanced microscopy tools and real time imaging, Sourav’s research also highlights development of organelle selective fluorescent probes for bioimaging applications."
+  ],
+  "interests": [
+    "chemical biology",
+    "synthetic chemistry",
+    "small molecule modulators",
+    "protein post-translational modifications",
+    "protein methylation",
+    "protein acylation",
+    "protein glycosylation",
+    "protein hydroxylation"
+  ],
+  "positions": [
+    {
+      "title": "Assistant Professor of Chemistry",
+      "org": "Ashoka University",
+      "note": "Current"
+    },
+    {
+      "title": "Postdoctoral research",
+      "org": "Jawaharlal Nehru Centre for Advanced Scientific Research",
+      "note": "Bangalore, India"
+    },
+    {
+      "title": "Postdoctoral research",
+      "org": "The Scripps Research Institute",
+      "note": "Florida, USA"
+    },
+    {
+      "title": "Postdoctoral research",
+      "org": "University of Minnesota",
+      "note": "Minneapolis, USA"
+    }
+  ],
+  "education": [
+    {
+      "degree": "PhD",
+      "org": "CSIR-Indian Institute of Chemical Biology",
+      "year": "2017"
+    }
+  ],
+  "publications": [
+    {
+      "title": "2-Oxoglutarate analogue-based biomolecular tools for exploring structure-activity relationships in non-heme iron enzymes.",
+      "authors": "Peter Windsor#, Sourav Chatterjee#, Anoop Rama Damodaran, and Ambika Bhagi-Damodaran. # Equal contribution.",
+      "venue": "ChemBioChem",
+      "year": "2025"
+    },
+    {
+      "title": "His-Tagging: Exploring Precise Chemical Modification of Histidine-Containing Bioactive Peptide Sequences.",
+      "authors": "Sourav Chatterjee∗, Bishwajit Paul∗, and Govindaswamy Shanker.",
+      "venue": "Synlett",
+      "year": "2025"
+    },
+    {
+      "title": "Controllable multihalogenation of a non-native substrate by the SyrB2 iron halogenase.",
+      "authors": "R. Hunter Wilson, Sourav Chatterjee, Elizabeth R. Smithwick, Anoop R. Damodaran, and Ambika Bhagi-Damodaran.",
+      "venue": "ACS Catal.",
+      "year": "2024"
+    },
+    {
+      "title": "Electrostatically regulated active site assembly governs reactivity in non-heme iron halogenases.",
+      "authors": "Elizabeth R. Smithwick, Hunter R. Wilson, Sourav Chatterjee, Yu Pu, Joseph J. Dalluge, Anoop Rama Damodaran, and Ambika Bhagi-Damodaran.",
+      "venue": "ACS Catal.",
+      "year": "2023"
+    },
+    {
+      "title": "A newly synthesized 3-indolyl furanoid inhibits matrix metalloproteinase-9 activity and prevents nonsteroidal anti-inflammatory drugs-induced gastric ulceration.",
+      "authors": "Deep S. Rudra#, Sourav Chatterjee#, Uttam Pal#, Madhumita Mandal, Susri Ray Chaudhuri, Mrinmay Bhunia, Nakul C. Maiti, Shila E. Besra, Parasuraman Jaisankar, and Snehasikta Swarnakar. # Equal contribution.",
+      "venue": "J. Med. Chem.",
+      "year": "2023"
+    },
+    {
+      "title": "Catecholase catalyzed synthesis of wedelolactone, a natural coumestan and its analogs.",
+      "authors": "Anushree Achari#, Sourav Chatterjee#, Sudip Dey, S.; Tapas K. Kundu, and Parasuraman Jaisankar. # Equal contribution.",
+      "venue": "Org. Biomol. Chem.",
+      "year": "2023"
+    },
+    {
+      "title": "Role of secondary coordination sphere residues in halogenation catalysis of non-heme iron enzymes.",
+      "authors": "Hunter R. Wilson, Sourav Chatterjee, Elizabeth Smithwick, Joseph Dalluge, and Ambika Bhagi-Damodaran.",
+      "venue": "ACS Catal.",
+      "year": "2022"
+    },
+    {
+      "title": "Butyrylation meets adipogenesis – probed by p300 catalyzed acylation specific small molecule inhibitor: Implication in anti-obesity therapy.",
+      "authors": "Aditya Bhattacharya, Sourav Chatterjee, Utsa Bhaduri, Akash Kumar Singh, Madavan Vasudevan, Koneni V. Sashidhara, Rajdeep Guha, Aamir Nazir, Srikanta Kumar Rath, Nagashayana Natesh, and Tapas K. Kundu.",
+      "venue": "J. Med. Chem.",
+      "year": "2022"
+    },
+    {
+      "title": "Bis-indole/carbazole based C5-Curcuminoid fluorescent probe with large Stokes shift for selective detection of biothiol and application to live cell imaging.",
+      "authors": "Pinaki Bhattacharjee, Sourav Chatterjee, Anushree Achari, Abhijit Saha, Debkumar Nandi, Chiranjit Acharya, Kasturi Chatterjee, Surajit Ghosh, Snehasikta Swarnakar, Parasuraman Jaisankar.",
+      "venue": "Analyst",
+      "year": "2020"
+    },
+    {
+      "title": "Silencing glycosaminoglycan functions in mouse embryonic stem cells with small molecule antagonists.",
+      "authors": "Sourav Chatterjee, Tesia N. Stephenson, Austen L. Michalak, Kamil Godula, and Mia L. Huang.",
+      "venue": "Methods in Enzymology",
+      "year": "2019"
+    },
+    {
+      "title": "Establishment of atropisomerism in 3-indolyl furanoids: A synthetic, experimental and theoretical perspective.",
+      "authors": "Sourav Chatterjee, Pinaki Bhattacharjee, Glenn L. Butterfoss, Anushree Achari, and Parasuraman Jaisankar.",
+      "venue": "RSC Advances",
+      "year": "2019"
+    },
+    {
+      "title": "Fiaud’s acid: A Brønsted acid catalyst for enantioselective Friedel-Crafts alkylation of indoles with 2-alkene-1,4-diones.",
+      "authors": "Sourav Chatterjee, Lukas Hintermann, Madhumita Mandal, Sreya Gupta, Anushree Achari, and Parasuraman Jaisankar.",
+      "venue": "Org. Lett.",
+      "year": "2017"
+    },
+    {
+      "title": "Racemization barriers of atropisomeric 3,3′-bipyrroles: An experimental study with theoretical verification.",
+      "authors": "Sourav Chatterjee, Glenn L. Butterfoss, Madhumita Mandal, Richard Bonneau, Bishwajit Paul, Sreya Gupta, and Parasuraman Jaisankar.",
+      "venue": "RSC Advances",
+      "year": "2016"
+    },
+    {
+      "title": "Synthesis of bis-pyrrolizidine-fused dispiro-oxindole analogues of curcumin via one-pot azomethine ylide cycloaddition: Experimental and computational approach toward regio- and diastereoselection.",
+      "authors": "Yogesh P. Bharitkar, Mohua Das, Neha Kumari, M. Padma Kumari, Abhijit Hazra, Sagar S. Bhayye, Ramalingam Natarajan, Siddharth Shah, Sourav Chatterjee, and Nirup B. Mondal.",
+      "venue": "Org. Lett.",
+      "year": "2015"
+    },
+    {
+      "title": "Indium trichloride catalyzed sp3 C–H bond functionalization of 2-alkyl azaarenes under microwave irradiation.",
+      "authors": "Sourav Chatterjee, Pinaki Bhattacharjee, Jagadeesh Temburu, Debkumar Nandi, and Parasuraman Jaisankar.",
+      "venue": "Tet. Lett.",
+      "year": "2014"
+    },
+    {
+      "title": "Woollins Reagent: A chemoselective reducing agent for 1,4-enediones and 1,4-ynediones to saturated 1,4-diones.",
+      "authors": "Madhumita Mandal, Sourav Chatterjee, and Parasuraman Jaisankar.",
+      "venue": "Synlett",
+      "year": "2012"
+    }
+  ],
+  "teaching": [],
+  "awards": [],
+  "sections": [],
+  "metrics": {},
+  "contact": {
+    "email": "sourav.chatterjee@ashoka.edu.in",
+    "phone": "",
+    "office": ""
+  },
+  "links": {
+    "profile": "",
+    "scholar": "",
+    "orcid": "",
+    "linkedin": "",
+    "website": ""
+  },
+  "sources": []
+}

@@ -1,0 +1,17 @@
+# Secrets and machine-local files
+.env
+.site_url
+__pycache__/
+
+# Built output (published to Vercel, rebuilt from data/)
+site/
+
+# Raw material and working lists that should not be public
+raw/
+inbox/
+queue.csv
+links.csv
+preview/
+
+# Editor and plugin caches
+.impeccable/
