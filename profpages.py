@@ -596,10 +596,23 @@ def git_sync():
     def git(*args):
         return subprocess.run(["git", *args], cwd=ROOT, capture_output=True, text=True, encoding="utf-8", errors="replace")
     git("add", "-A")
-    if not git("status", "--porcelain").stdout.strip():
+    changes = git("status", "--porcelain").stdout.splitlines()
+    if not changes:
         return
-    names = sorted(f.stem for f in DATA.glob("*.json"))
-    git("commit", "-m", f"Update faculty pages ({len(names)} professors)")
+    # Name the professor in the commit, so the history reads as a log of the work: "Add page for ...".
+    added, updated = [], []
+    for line in changes:
+        code, path = line[:2], line[3:].strip().strip('"')
+        if path.startswith("data/") and path.endswith(".json") and (ROOT / path).exists():
+            name = json.loads((ROOT / path).read_text(encoding="utf-8")).get("name") or Path(path).stem
+            (added if "A" in code else updated).append(name)
+    if added:
+        message = "Add page for " + ", ".join(added)
+    elif updated:
+        message = "Update page for " + ", ".join(updated)
+    else:
+        message = "Update the page maker"
+    git("commit", "-m", message)
     push = git("push")
     print("  saved to GitHub" if push.returncode == 0 else "  ! could not push to GitHub: " + (push.stderr.strip().splitlines() or ["unknown reason"])[-1])
 
