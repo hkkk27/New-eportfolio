@@ -59,6 +59,12 @@ To remove a professor, delete their file in `data/` and deploy again.
 
 You can also drop a ready-made `.json` file into `inbox/` in the same shape as the files in `data/`.
 
+## GitHub
+
+This folder is the `faculty-pages` branch of `hkkk27/New-eportfolio`. Every time a page is made or the site is
+published, the tool saves the change to that branch by itself. The working lists (`queue.csv`, `links.csv`),
+the raw pasted text and the `.env` file are never uploaded.
+
 ## The AI step
 
 The script sends the text to a free OpenRouter model once per professor, to sort it into roles, education and awards.
