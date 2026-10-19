@@ -322,7 +322,7 @@
             ctx.globalAlpha = 1;
             ctx.strokeStyle = 'rgba(43,60,245,.3)';
             ctx.lineWidth = 1;
-            ctx.beginPath(); ctx.arc(c, c, Rg - 0.5, 0, 7); ctx.stroke();
+            ctx.beginPath(); ctx.arc(c, c, Math.max(0, Rg - 0.5), 0, 7); ctx.stroke();  // a canvas with no size yet must not throw
 
             let active = null;
             for (const key in PINS) {
