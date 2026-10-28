@@ -6,6 +6,8 @@
     const $$ = (s, r = document) => [...r.querySelectorAll(s)];
     const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
     const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+    const easeInOut = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+    const columns = (el) => getComputedStyle(el).gridTemplateColumns.split(' ').filter(Boolean).length || 1;
     const RAD = Math.PI / 180;
 
     /* ---------- Nav ---------- */
@@ -67,6 +69,104 @@
         });
     }));
 
+    /* ---------- Scroll motion: entry vectors, service names, logo wall ---------- */
+
+    if (!reduce) initMotion();
+
+    function initMotion() {
+        const grid = $('#site-grid');
+        const logos = $('.logos');
+        const quotesBox = $('.quotes');
+        const names = $$('.kit dt');
+        const services = $('#services');
+
+        // Entry vectors for the work grid: x, y, scale, rotate.
+        const KIND = {
+            L: (far) => [-far, 20, 1, -2],
+            R: (far) => [far, 20, 1, 2],
+            F: () => [0, 80, 0.84, 0],     // from further away
+            N: () => [0, 30, 1.12, 0],     // from close to the viewer
+            U: () => [0, 130, 0.96, 0]
+        };
+        const PATTERN = { 3: ['LFR', 'NUR'], 2: ['LF', 'NR'] };
+        const SOLO = 'LRFRLN';
+
+        function aim() {
+            if (grid) {
+                const cols = columns(grid);
+                const colW = grid.clientWidth / cols;
+                const far = clamp(window.innerWidth * 0.08, 40, 120);
+                let row = -1, lastTop = null, n = 0;
+                sites.forEach((s) => {
+                    if (s.hidden) return;
+                    if (s.offsetTop !== lastTop) { row++; lastTop = s.offsetTop; }
+                    n++;
+                    if (s.classList.contains('is-in')) return;
+                    const col = clamp(Math.round((s.offsetLeft - grid.offsetLeft) / colW), 0, cols - 1);
+                    let k;
+                    if (s.classList.contains('site--wide')) k = 'F';
+                    else if (cols === 1) k = SOLO[(n - 1) % SOLO.length];
+                    else { const p = PATTERN[cols] || PATTERN[3]; k = p[row % 2][col] || 'F'; }
+                    const [x, y, sc, r] = KIND[k](far);
+                    s.style.setProperty('--ex', x + 'px');
+                    s.style.setProperty('--ey', y + 'px');
+                    s.style.setProperty('--es', sc);
+                    s.style.setProperty('--er', r + 'deg');
+                    s.style.setProperty('--ed', (cols === 1 ? 0 : col * 90) + 'ms');
+                });
+            }
+            if (logos) {
+                // A diagonal sweep with a tie-break, so every tile lands on its own beat.
+                const cols = columns(logos);
+                $$('.logo', logos).forEach((l, i) => {
+                    const r = Math.floor(i / cols), c = i % cols;
+                    l.style.setProperty('--d', ((r + c) * 2 + r) * 55 + 'ms');
+                });
+            }
+            if (quotesBox) {
+                const qs = $$('.quote', quotesBox);
+                const w = qs[0] ? qs[0].offsetWidth : 1;
+                qs.forEach((q) => {
+                    if (q.classList.contains('is-in')) return;
+                    const col = Math.round((q.offsetLeft - qs[0].offsetLeft) / w);
+                    q.style.setProperty('--qy', (col % 2 ? 5 : -5) + 'deg');
+                    q.style.setProperty('--qd', col * 110 + 'ms');
+                });
+            }
+        }
+
+        // Service names scale up as they cross the middle of the screen.
+        const docTop = (el) => { let y = 0; for (let n = el; n; n = n.offsetParent) y += n.offsetTop; return y; };
+        let centres = [], live = false, ticking = false;
+        const measureNames = () => { centres = names.map((d) => docTop(d) + d.offsetHeight / 2); };
+        const swell = () => {
+            ticking = false;
+            const vh = window.innerHeight, mid = window.scrollY + vh / 2, reach = vh * 0.42;
+            names.forEach((d, i) => {
+                const t = clamp(1 - Math.abs(centres[i] - mid) / reach, 0, 1);
+                const v = (1 + 0.075 * t * t * (3 - 2 * t)).toFixed(4);
+                if (d._s !== v) { d._s = v; d.style.transform = 'scale(' + v + ')'; }
+            });
+        };
+        const ask = () => { if (live && !ticking) { ticking = true; requestAnimationFrame(swell); } };
+        if (services && names.length && 'IntersectionObserver' in window) {
+            new IntersectionObserver((es) => { live = es[0].isIntersecting; ask(); }).observe(services);
+            window.addEventListener('scroll', ask, { passive: true });
+        }
+
+        let queued = false;
+        const refresh = () => {
+            if (queued) return;
+            queued = true;
+            requestAnimationFrame(() => { queued = false; aim(); measureNames(); ask(); });
+        };
+        aim();
+        measureNames();
+        if ('ResizeObserver' in window) new ResizeObserver(refresh).observe(document.body);
+        window.addEventListener('resize', refresh);
+        filterBtns.forEach((b) => b.addEventListener('click', refresh));
+    }
+
     /* ---------- Orbit ---------- */
 
     const stage = $('.orbit');
@@ -83,6 +183,13 @@
         const capName = $('.facing__name');
         const capMeta = $('.facing__meta');
         const capOpen = $('.facing__open');
+        const hero = stage.closest('.hero');
+        const rings = $$('.orbit__path', stage);
+        const facing = $('.facing');
+        const railFill = $('.hero__rail i');
+        // Smoothstep over a slice of the zoom, so an element eases in during part of the pull-back.
+        const sm = (x) => { x = clamp(x, 0, 1); return x * x * (3 - 2 * x); };
+        const win = (a, b) => sm((pz - a) / (b - a));
 
         const P = 1400;                 // viewing distance used for the perspective scale
         const AUTO = reduce ? 0 : 7;    // idle spin, degrees per second
@@ -91,11 +198,37 @@
         let rot = 0, vel = AUTO, target = null, hold = 0, hover = false, dragging = false;
         let front = -1, activePin = '', t0 = performance.now(), last = t0, raf = 0, visible = true;
 
+        /* Scroll zoom: 0 = close-up with cards flown out, 1 = settled orbit. */
+        const ZOOM = 0.6;
+        // Fly-out vector per card: x (left/right), y (up/down), depth (+ nearer, - further).
+        const DIRS = [[-1, -0.25, 0.9], [1, -0.1, -0.4], [0.15, -1, 0.5], [-0.9, 0.35, 1.2], [0.95, -0.7, 0.3],
+            [-0.4, -1, -0.45], [1, 0.3, 1], [-1, -0.6, -0.3], [0.5, -1, 1.1], [-0.75, 0.1, 0.6],
+            [0.85, 0.2, -0.35], [-0.15, -1, 0.8], [1, -0.45, 0.65], [-1, 0.15, -0.2]];
+        const LAG_MAX = 0.3;
+        const lag = (i) => ((i * 5) % 7) / 7 * LAG_MAX;
+        let pz = reduce ? 1 : 0, pinLen = 1, orbitTop = 0, near = null, lastGT = '';
+
+        function setPin() {
+            if (!hero || reduce) return;
+            hero.classList.remove('is-pinned');
+            if (window.innerWidth >= 760 && hero.offsetHeight <= window.innerHeight * 1.3) hero.classList.add('is-pinned');
+            pinLen = Math.max(1, hero.offsetHeight - window.innerHeight);
+        }
+        function zoomTarget() {
+            if (reduce) return 1;
+            const vh = window.innerHeight, y = window.scrollY;
+            if (hero && hero.classList.contains('is-pinned')) return clamp(y / pinLen, 0, 1);
+            // Not pinned (phones): start close-up at the top, settle as the ring nears the middle of the screen.
+            const range = Math.max(vh * 0.45, orbitTop + H / 2 - vh * 0.55);
+            return clamp(y / range, 0, 1);
+        }
+
         stage.classList.add('is-live');
 
         function measure() {
             const r = stage.getBoundingClientRect();
             W = r.width; H = r.height;
+            orbitTop = r.top + window.scrollY;
             cw = clamp(W * 0.185, 150, 270);
             ch = cw * 0.625 + 24;
             stage.style.setProperty('--cw', cw.toFixed(1) + 'px');
@@ -107,8 +240,11 @@
             // The globe sits above the ring's centre so the front cards cover only its base.
             Rg = Math.min(H * 0.34, Rx * 0.5);
             gy = H * 0.36;
+            rings.forEach((s) => { s.style.transformOrigin = cx.toFixed(1) + 'px ' + gy.toFixed(1) + 'px'; });
+            lastGT = '';
 
-            dpr = Math.min(window.devicePixelRatio || 1, 2);
+            // Drawn a little sharper on larger screens so the close-up globe is not soft.
+            dpr = Math.min(window.devicePixelRatio || 1, 2) * (!reduce && W >= 760 ? 1.3 : 1);
             const size = Math.round((Rg + 64) * 2);
             canvas.width = size * dpr;
             canvas.height = size * dpr;
@@ -158,19 +294,41 @@
             const spinIn = (1 - easeOut(intro)) * -150;
             let best = -2, bestI = 0;
 
+            // Camera: zoomed in on the globe, sitting slightly low, then pulling back.
+            const ez = easeInOut(pz), close = 1 - ez;
+            const Z = 1 + ZOOM * close, lift = H * 0.06 * close;
+            const isNear = pz < 0.999;
+            if (isNear !== near) { near = isNear; stage.classList.toggle('is-near', isNear); }
+            const gT = `translate3d(0,${lift.toFixed(1)}px,0) scale(${Z.toFixed(4)})`;
+            if (gT !== lastGT) {
+                lastGT = gT;
+                canvas.style.transform = gT;
+                rings.forEach((s) => { s.style.transform = gT; s.style.opacity = (0.2 + 0.8 * ez).toFixed(3); });
+                if (railFill) railFill.style.transform = `scaleY(${pz.toFixed(4)})`;
+                if (facing && !reduce) {
+                    // The caption bar settles in once the ring is nearly in place.
+                    const o = win(0.55, 0.92);
+                    facing.style.opacity = (0.35 + 0.65 * o).toFixed(3);
+                    facing.style.transform = o >= 1 ? '' : `translate3d(0,${(16 * (1 - o)).toFixed(1)}px,0)`;
+                }
+            }
+
             for (let i = 0; i < N; i++) {
                 const e = reduce ? 1 : easeOut(clamp((now - t0 - i * 60) / 900, 0, 1));
                 const q = project(total + spinIn + i * STEP);
                 const push = 1 + (1 - e) * 0.35;
-                const x = cx + (q.x - cx) * push;
-                const y = cy + (q.y - cy) * push;
+                const k = easeOut(clamp((pz - lag(i)) / (1 - LAG_MAX), 0, 1)), f = 1 - k;
+                const v = DIRS[i % DIRS.length];
+                const x = cx + (q.x - cx) * push * Z + v[0] * W * 0.32 * f;
+                const y = gy + (cy + (q.y - cy) * push - gy) * Z + lift + v[1] * H * 0.38 * f;
                 const depth = (q.d + 1) / 2;
                 const el = cards[i];
-                el.style.transform = `translate3d(${(x - cw / 2).toFixed(1)}px,${(y - ch / 2).toFixed(1)}px,0) scale(${(q.s * (0.85 + 0.15 * e)).toFixed(4)})`;
+                el.style.transform = `translate3d(${(x - cw / 2).toFixed(1)}px,${(y - ch / 2).toFixed(1)}px,0) scale(${(q.s * (0.85 + 0.15 * e) * Z * (1 + v[2] * 0.5 * f)).toFixed(4)})`;
                 // Cards stay opaque so they hide what is behind them; distance is a fog of the page colour.
                 el.style.opacity = e.toFixed(3);
                 el.style.setProperty('--fog', (0.72 * (1 - Math.pow(depth, 1.3))).toFixed(3));
-                el.style.zIndex = q.d >= 0 ? 200 + Math.round(q.d * 100) : 10 + Math.round((q.d + 1) * 80);
+                const lift3d = v[2] > 0 ? Math.round(v[2] * f * 150) : 0;
+                el.style.zIndex = (q.d >= 0 ? 200 + Math.round(q.d * 100) : 10 + Math.round((q.d + 1) * 80)) + lift3d;
                 el.style.pointerEvents = q.d < -0.25 ? 'none' : '';
                 if (q.d > best) { best = q.d; bestI = i; }
             }
@@ -181,6 +339,9 @@
         function frame(now) {
             const dt = Math.min((now - last) / 1000, 0.05);
             last = now;
+            const zt = zoomTarget();
+            pz += (zt - pz) * Math.min(1, dt * 7);
+            if (Math.abs(zt - pz) < 0.0005) pz = zt;
             if (!dragging) {
                 if (target !== null) {
                     const diff = target - rot;
@@ -363,9 +524,20 @@
 
         /* ---------- Run ---------- */
 
+        setPin();
         measure();
+        pz = zoomTarget();
         if ('ResizeObserver' in window) new ResizeObserver(measure).observe(stage);
         else window.addEventListener('resize', measure);
+        let pinQueued = false;
+        const repin = () => {
+            if (pinQueued) return;
+            pinQueued = true;
+            requestAnimationFrame(() => { pinQueued = false; setPin(); measure(); });
+        };
+        window.addEventListener('resize', repin);
+        window.addEventListener('load', repin);
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(repin);
 
         if ('IntersectionObserver' in window) {
             new IntersectionObserver((entries) => {
