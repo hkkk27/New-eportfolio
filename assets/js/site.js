@@ -200,22 +200,23 @@
 
         /* Scroll zoom: 0 = close-up with cards flown out, 1 = settled orbit. */
         const ZOOM = 0.6;
+        const SCROLL_ZOOM = false;      // scroll pull-back and pinned hero: off, the orbit stays as it was
         // Fly-out vector per card: x (left/right), y (up/down), depth (+ nearer, - further).
         const DIRS = [[-1, -0.25, 0.9], [1, -0.1, -0.4], [0.15, -1, 0.5], [-0.9, 0.35, 1.2], [0.95, -0.7, 0.3],
             [-0.4, -1, -0.45], [1, 0.3, 1], [-1, -0.6, -0.3], [0.5, -1, 1.1], [-0.75, 0.1, 0.6],
             [0.85, 0.2, -0.35], [-0.15, -1, 0.8], [1, -0.45, 0.65], [-1, 0.15, -0.2]];
         const LAG_MAX = 0.3;
         const lag = (i) => ((i * 5) % 7) / 7 * LAG_MAX;
-        let pz = reduce ? 1 : 0, pinLen = 1, orbitTop = 0, near = null, lastGT = '';
+        let pz = (reduce || !SCROLL_ZOOM) ? 1 : 0, pinLen = 1, orbitTop = 0, near = null, lastGT = '';
 
         function setPin() {
-            if (!hero || reduce) return;
+            if (!hero || reduce || !SCROLL_ZOOM) return;
             hero.classList.remove('is-pinned');
             if (window.innerWidth >= 760 && hero.offsetHeight <= window.innerHeight * 1.3) hero.classList.add('is-pinned');
             pinLen = Math.max(1, hero.offsetHeight - window.innerHeight);
         }
         function zoomTarget() {
-            if (reduce) return 1;
+            if (reduce || !SCROLL_ZOOM) return 1;
             const vh = window.innerHeight, y = window.scrollY;
             if (hero && hero.classList.contains('is-pinned')) return clamp(y / pinLen, 0, 1);
             // Not pinned (phones): start close-up at the top, settle as the ring nears the middle of the screen.
