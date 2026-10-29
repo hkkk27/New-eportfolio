@@ -681,3 +681,30 @@ h3 { font-family: var(--display); font-stretch: 86%; font-weight: 700; font-size
 @media (prefers-reduced-motion: reduce) {
     #services::before, #clients::before, .wa::after { animation: none; }
 }
+
+/* ---------- Logo marquee and lighter effects (29 Oct, evening) ---------- */
+.marquee {
+    overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.marquee__track { display: flex; width: max-content; animation: marquee 38s linear infinite; will-change: transform; }
+.marquee:hover .marquee__track { animation-play-state: paused; }
+.marquee .logos { display: flex; border: 0; }
+.js .marquee .logos .logo { opacity: .82; animation: none; }
+.marquee .logo { flex: none; width: clamp(170px, 18vw, 240px); border-bottom: 0; }
+.marquee .logo:hover { opacity: 1; }
+.logo--vtp { font: 800 2rem/1 var(--display); letter-spacing: .08em; }
+.logo--rudra { font-weight: 600; letter-spacing: .04em; }
+.logo--karta { font-weight: 800; }
+@keyframes marquee { to { transform: translate3d(-50%, 0, 0); } }
+
+/* the colour switch between sections repainted blurred layers every frame; keep the look, drop the cost */
+body { transition-duration: .45s; }
+#services::before, #clients::before { filter: none; will-change: transform; }
+.svc, .quote { -webkit-backdrop-filter: none; backdrop-filter: none; background: linear-gradient(160deg, rgba(255, 255, 255, .2), rgba(255, 255, 255, .07)); }
+
+@media (prefers-reduced-motion: reduce) {
+    .marquee__track { animation: none; flex-wrap: wrap; width: auto; }
+    .marquee .logos[aria-hidden] { display: none; }
+}
