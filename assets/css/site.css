@@ -700,7 +700,7 @@ h3 { font-family: var(--display); font-stretch: 86%; font-weight: 700; font-size
 @keyframes marquee { to { transform: translate3d(-50%, 0, 0); } }
 
 /* the colour switch between sections repainted blurred layers every frame; keep the look, drop the cost */
-body { transition-duration: .45s; }
+body { transition-duration: 1.4s; transition-timing-function: cubic-bezier(.45, 0, .2, 1); }
 #services::before, #clients::before { filter: none; will-change: transform; }
 .svc, .quote { -webkit-backdrop-filter: none; backdrop-filter: none; background: linear-gradient(160deg, rgba(255, 255, 255, .2), rgba(255, 255, 255, .07)); }
 
