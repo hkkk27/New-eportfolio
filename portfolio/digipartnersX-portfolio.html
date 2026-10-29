@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>digipartnersX · Company portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+@page { size: 297mm 210mm; margin: 0; }
+:root {
+  --ink: #0D1033; --paper: #F2F4FA; --ultra: #2B3CF5; --marigold: #FFB21A;
+  --display: "Bricolage Grotesque", "Arial Narrow", sans-serif;
+  --text: "Instrument Sans", "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", Consolas, monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #888; }
+body { font-family: var(--text); color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.page { width: 297mm; height: 210mm; position: relative; overflow: hidden; page-break-after: always; padding: 15mm 17mm; display: flex; flex-direction: column; }
+.page:last-child { page-break-after: auto; }
+.ink { background: var(--ink); color: var(--paper); }
+.ultra { background: var(--ultra); color: #fff; }
+.paper { background: var(--paper); }
+.marigold { background: var(--marigold); }
+h1, h2, h3 { font-family: var(--display); font-stretch: 80%; letter-spacing: -.02em; line-height: .95; }
+.k { font: 500 8.5pt/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; opacity: .7; }
+.top { display: flex; justify-content: space-between; align-items: center; }
+.brand { font: 750 15pt/1 var(--display); font-stretch: 85%; letter-spacing: -.02em; }
+.brand b { color: var(--marigold); }
+.paper .brand b, .marigold .brand b { color: var(--ultra); }
+.pg { font: 500 8.5pt var(--mono); opacity: .6; }
+
+/* glass and clay, echoing the site */
+.glass { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.28); border-radius: 18px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 18px 40px rgba(13,16,51,.25); backdrop-filter: blur(14px); }
+.clay { background: #fff; border-radius: 18px; box-shadow: 0 10px 24px rgba(13,16,51,.08), inset 0 -3px 0 rgba(13,16,51,.05); }
+.blob { position: absolute; border-radius: 50%; filter: blur(50px); opacity: .55; }
+
+/* 1. cover */
+.cover h1 { font-size: 66pt; max-width: 175mm; margin-top: auto; }
+.cover h1 em { font-style: normal; color: var(--marigold); }
+.cover .lede { font-size: 13pt; line-height: 1.45; max-width: 140mm; margin-top: 7mm; color: #E3E6FF; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5mm; margin-top: 11mm; }
+.stats div { padding: 5mm 6mm; }
+.stats strong { display: block; font: 750 26pt/1 var(--display); font-stretch: 78%; }
+.stats span { font-size: 9pt; color: #E3E6FF; }
+.cover .foot { display: flex; justify-content: space-between; margin-top: 8mm; font: 500 9pt var(--mono); }
+.ring { position: absolute; right: -40mm; top: -30mm; width: 150mm; height: 150mm; border-radius: 50%; border: 1px solid rgba(255,255,255,.25); }
+.ring.r2 { right: -10mm; top: 0; width: 90mm; height: 90mm; }
+
+/* 2. services */
+.head { display: flex; justify-content: space-between; align-items: flex-end; margin: 8mm 0 6mm; gap: 12mm; }
+.head h2 { font-size: 34pt; }
+.head p { max-width: 95mm; font-size: 10pt; line-height: 1.45; opacity: .8; }
+.svcs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4mm; }
+.svc { padding: 5mm; }
+.svc i { display: grid; place-items: center; width: 10mm; height: 10mm; border-radius: 10px; background: var(--ultra); margin-bottom: 3mm;
+  box-shadow: inset 0 -3px 0 rgba(0,0,0,.18), 0 6px 12px rgba(43,60,245,.3); }
+.svc svg { width: 5.5mm; height: 5.5mm; fill: none; stroke: #fff; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.svc h3 { font-size: 12.5pt; margin-bottom: 2mm; }
+.svc ul { list-style: none; font-size: 8.4pt; line-height: 1.55; color: #3A3F66; }
+.steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4mm; margin-top: auto; }
+.steps div { border-top: 2px solid var(--ink); padding-top: 3mm; }
+.steps b { font: 500 8pt var(--mono); opacity: .6; }
+.steps h3 { font-size: 12pt; margin: 1.5mm 0 1mm; }
+.steps p { font-size: 8.2pt; line-height: 1.4; color: #3A3F66; }
+
+/* 3. work */
+.work { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4.5mm; }
+.card { overflow: hidden; }
+.card img { display: block; width: 100%; height: 28mm; object-fit: cover; object-position: top; }
+.card div { padding: 3mm 4mm 3.5mm; }
+.card h3 { font-size: 11.5pt; }
+.card p { font-size: 8pt; line-height: 1.4; color: #C9CEEE; margin-top: 1mm; }
+.card .u { font: 500 7.5pt var(--mono); color: var(--marigold); margin-top: 1.5mm; }
+.tag { display: inline-block; font: 500 6.5pt var(--mono); text-transform: uppercase; letter-spacing: .08em; padding: .6mm 1.6mm; border-radius: 99px; background: rgba(255,178,26,.18); color: var(--marigold); margin-left: 1.5mm; vertical-align: middle; }
+.beyond { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4.5mm; margin-top: auto; padding-top: 4mm; }
+.beyond div { padding: 4mm; }
+.beyond h3 { font-size: 11pt; }
+.beyond p { font-size: 8pt; line-height: 1.4; color: #C9CEEE; margin-top: 1mm; }
+.beyond small { display: block; font: 500 7pt var(--mono); color: var(--marigold); margin-top: 1.5mm; }
+
+/* 4. clients */
+.logos { display: flex; flex-wrap: wrap; gap: 2.5mm; margin-bottom: 5mm; }
+.logos span { padding: 2mm 4.5mm; font: 700 10.5pt var(--display); font-stretch: 85%; }
+.quotes { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4mm; }
+.quote { grid-column: span 2; }
+.quote.w { grid-column: span 3; }
+.quote { padding: 4mm 5mm; }
+.quote p { font-size: 8.4pt; line-height: 1.5; }
+.quote p::before { content: "\201C"; font: 800 22pt/0 var(--display); color: var(--ultra); vertical-align: -9pt; margin-right: 1mm; }
+.quote b { display: block; margin-top: 3mm; font-size: 8.8pt; }
+.quote small { font: 500 7.2pt var(--mono); opacity: .65; text-transform: uppercase; letter-spacing: .06em; }
+.close { display: grid; grid-template-columns: 1.1fr 1fr; gap: 6mm; margin-top: auto; padding-top: 4mm; }
+.founder { display: flex; gap: 5mm; padding: 5mm; align-items: center; }
+.founder img { width: 24mm; height: 24mm; border-radius: 50%; object-fit: cover; }
+.founder h3 { font-size: 13pt; }
+.founder p { font-size: 8.4pt; line-height: 1.45; color: #3A3F66; margin-top: 1mm; }
+.contact { padding: 5mm 6mm; background: var(--ink); color: var(--paper); border-radius: 18px; }
+.contact h3 { font-size: 17pt; }
+.contact dl { display: grid; grid-template-columns: 20mm 1fr; gap: 1.6mm 3mm; margin-top: 3mm; font-size: 9pt; }
+.contact dt { font: 500 7.5pt var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--marigold); padding-top: .6mm; }
+</style>
+</head>
+<body>
+
+<!-- 1 · Cover -->
+<section class="page ultra cover">
+  <div class="blob" style="width:120mm;height:120mm;background:#FFB21A;left:-30mm;bottom:-60mm;opacity:.35"></div>
+  <div class="blob" style="width:110mm;height:110mm;background:#7C8BFF;right:20mm;top:40mm;opacity:.5"></div>
+  <div class="ring"></div><div class="ring r2"></div>
+  <div class="top" style="position:relative"><span class="brand">digipartners<b>X</b></span><span class="k">Company portfolio · 2026</span></div>
+  <h1 style="position:relative">Your brand, built and marketed <em>end to end.</em></h1>
+  <p class="lede" style="position:relative">digipartnersX is a 360° digital agency in Pune. One team for the brand, the creatives, the website, the marketing and the automation behind it.</p>
+  <div class="stats" style="position:relative">
+    <div class="glass"><strong>2 years</strong><span>in the industry</span></div>
+    <div class="glass"><strong>360°</strong><span>branding, design, marketing, web and automation</span></div>
+    <div class="glass"><strong>3 countries</strong><span>clients in India, the UAE and Bahrain</span></div>
+    <div class="glass"><strong>14+ sites</strong><span>live and open to visit</span></div>
+  </div>
+  <div class="foot" style="position:relative"><span>digipartnersx.vercel.app</span><span>+91 95035 60489 · harshit.singh@flame.edu.in</span></div>
+</section>
+
+<!-- 2 · Services and process -->
+<section class="page paper">
+  <div class="top"><span class="brand">digipartners<b>X</b></span><span class="pg">02 · What we do</span></div>
+  <div class="head"><div><p class="k">Services</p><h2>Everything your brand needs,<br>from one team.</h2></div>
+    <p>Real estate, non-profits, artists, professionals and education. You get one point of contact, and the brand, the campaign and the website all speak the same language.</p></div>
+  <div class="svcs">
+    <div class="svc clay"><i><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6-5.3-3-5.3 3 1.2-6L3.4 9.3l6-.7z"/></svg></i><h3>Branding and strategy</h3><ul><li>Brand identity and logos</li><li>Positioning</li><li>Brand guidelines</li><li>Content for companies</li></ul></div>
+    <div class="svc clay"><i><svg viewBox="0 0 24 24"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M14 7l3 3"/></svg></i><h3>Design</h3><ul><li>Posters and banners</li><li>CP creatives</li><li>Hoardings and OOH</li><li>Brochures</li></ul></div>
+    <div class="svc clay"><i><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></i><h3>Social media</h3><ul><li>Instagram posts and reels</li><li>Monthly creatives</li><li>Product and festive wishes</li><li>Page management</li></ul></div>
+    <div class="svc clay"><i><svg viewBox="0 0 24 24"><path d="M3 10v4h3l6 4V6L6 10z"/><path d="M16 8.5a5 5 0 010 7"/></svg></i><h3>Digital marketing</h3><ul><li>Instagram and Meta ads</li><li>Lead generation</li><li>Referral creatives</li><li>Client handling</li></ul></div>
+    <div class="svc clay"><i><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg></i><h3>Websites</h3><ul><li>Design and development</li><li>Portfolios</li><li>Business and non-profit sites</li><li>Hosting and upkeep</li></ul></div>
+    <div class="svc clay"><i><svg viewBox="0 0 24 24"><path d="M4 18.5V6a2 2 0 012-2h12a2 2 0 012 2v9a2 2 0 01-2 2H7z"/></svg></i><h3>WhatsApp and bots</h3><ul><li>WhatsApp AI agents</li><li>Auto-replies</li><li>Chatbots</li><li>CRM and automation</li></ul></div>
+    <div class="svc clay"><i><svg viewBox="0 0 24 24"><path d="M4 21V8l6-4v17"/><path d="M10 21V10l10 3v8"/><path d="M3 21h18"/></svg></i><h3>Project collaterals</h3><ul><li>Site and sales office branding</li><li>OOH campaigns</li><li>Exhibition stalls</li><li>Sales presenter and brochure</li></ul></div>
+    <div class="svc clay"><i><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></i><h3>Event collaterals</h3><ul><li>Event branding</li><li>Event presentations</li><li>Invitations</li></ul></div>
+  </div>
+  <div class="steps">
+    <div><b>01</b><h3>Discover</h3><p>A short call about your business, your customers and what you want to grow.</p></div>
+    <div><b>02</b><h3>Plan</h3><p>Which services and channels, the timeline and the cost, agreed up front.</p></div>
+    <div><b>03</b><h3>Create</h3><p>Brand, creatives, website or bot, shared with you at each stage.</p></div>
+    <div><b>04</b><h3>Launch</h3><p>The site, the campaign, the WhatsApp agent or the print run goes live.</p></div>
+    <div><b>05</b><h3>Grow</h3><p>Monthly creatives, ads and lead follow-up, with regular reports.</p></div>
+  </div>
+</section>
+
+<!-- 3 · Work -->
+<section class="page ink">
+  <div class="blob" style="width:120mm;height:120mm;background:#2B3CF5;right:-40mm;top:-50mm;opacity:.45"></div>
+  <div class="top" style="position:relative"><span class="brand">digipartners<b>X</b></span><span class="pg">03 · Selected work</span></div>
+  <div class="head" style="position:relative"><div><p class="k">Work</p><h2>Every site here is live.</h2></div>
+    <p>Websites for businesses, non-profits, artists and professionals. Projects marked Concept are design studies built on a sample brief.</p></div>
+  <div class="work" style="position:relative">
+    <div class="card glass"><img src="../assets/work/stambh-s.jpg" alt=""><div><h3>Stambh Realty</h3><p>Residential developer, Pune. Tower listings, a 3D building model and site-visit booking.</p><p class="u">stambh-realty.vercel.app</p></div></div>
+    <div class="card glass"><img src="../assets/work/blessing-s.jpg" alt=""><div><h3>Blessing Smile Foundation</h3><p>Non-profit, Varanasi. Programs, impact, a gallery and a donate flow with proof.</p><p class="u">blesssing-smile-foundation.vercel.app</p></div></div>
+    <div class="card glass"><img src="../assets/work/phad-s.jpg" alt=""><div><h3>Vijay Joshi · Phad Painting</h3><p>Folk artist, Rajasthan. The story and collection of a thirteenth-generation painter.</p><p class="u">phad-painting.vercel.app</p></div></div>
+    <div class="card glass"><img src="../assets/work/azal-s.jpg" alt=""><div><h3>Azal Mehandi Art</h3><p>Henna artist, Sharjah and Dubai. Bridal and party henna, booked over WhatsApp.</p><p class="u">azal-mehandi-art.vercel.app</p></div></div>
+    <div class="card glass"><img src="../assets/work/boxofgoodness-s.jpg" alt=""><div><h3>A Box of Goodness</h3><p>Volunteer-run charity, Bahrain. How to donate or volunteer, since 2016.</p><p class="u">a-box-of-goodness.vercel.app</p></div></div>
+    <div class="card glass"><img src="../assets/work/saanjh-s.jpg" alt=""><div><h3>Studio Saanjh <span class="tag">Concept</span></h3><p>Interior design studio, Pune. Projects, process and enquiries over WhatsApp.</p><p class="u">studio-saanjh-two.vercel.app</p></div></div>
+  </div>
+  <div class="beyond" style="position:relative">
+    <div class="glass"><p class="k">Beyond websites</p><h3>WhatsApp AI agent</h3><p>Turns incoming messages into notes, reminders and tasks, synced to Notion.</p><small>FastAPI · WhatsApp API · LLMs</small></div>
+    <div class="glass"><p class="k">Beyond websites</p><h3>Karta Attendance</h3><p>Offline-first QR check-in for events, with a volunteer scanner and an admin dashboard.</p><small>Python · FastAPI · offline sync</small></div>
+    <div class="glass"><p class="k">Beyond websites</p><h3>OmniLink CRM</h3><p>Customer profiles, membership and consent workflows, built during an internship at Tata Trent.</p><small>FastAPI · REST · JWT</small></div>
+  </div>
+</section>
+
+<!-- 4 · Clients, founder, contact -->
+<section class="page paper">
+  <div class="blob" style="width:110mm;height:110mm;background:#FFB21A;right:-30mm;bottom:-40mm;opacity:.35"></div>
+  <div class="top" style="position:relative"><span class="brand">digipartners<b>X</b></span><span class="pg">04 · Clients</span></div>
+  <div class="head" style="position:relative;margin-bottom:5mm"><div><p class="k">Clients</p><h2>Brands we've worked with.</h2></div></div>
+  <div class="logos" style="position:relative">
+    <span class="clay">Trent</span><span class="clay">Blessing Smile Foundation</span><span class="clay">Phad Painting · Shahpura</span><span class="clay">STAMBH Realty</span><span class="clay">vidit.tech</span><span class="clay">Azal Mehandi Art</span><span class="clay">A Box of Goodness</span><span class="clay">Karta Initiative</span>
+  </div>
+  <div class="quotes" style="position:relative">
+    <div class="quote clay"><p>Really happy with how the website turned out! He understood what we wanted and helped us present our foundation and our work online in a much better way. The overall experience was smooth.</p><b>Blessing Smile Foundation</b><small>Website</small></div>
+    <div class="quote clay"><p>He handled our Instagram ads and created posts for us as well. It was great to have someone manage both the promotions and the creative side together. Happy with the work and the effort he put in!</p><b>Shubham Singh</b><small>Instagram ads and posts</small></div>
+    <div class="quote clay"><p>Working with him was a good experience. He built a WhatsApp agent for us that helps make handling messages easier. I really liked that he understood the requirement and worked on a solution around it.</p><b>Supriya Singh</b><small>WhatsApp AI agent</small></div>
+    <div class="quote clay w"><p>Loved how my portfolio turned out! He made the whole thing look clean and professional, and it feels much better having my work presented properly in one place. Really happy with the result.</p><b>Vidit Gupta</b><small>Portfolio website</small></div>
+    <div class="quote clay w"><p>Really liked the website he made for us. He understood what we needed and turned it into something that looks professional and is easy to use. Overall, it was a nice experience working with him.</p><b>Vijay Joshi · Phad Painting</b><small>Website development</small></div>
+  </div>
+  <div class="close" style="position:relative">
+    <div class="founder clay"><img src="../assets/harshit.jpg" alt=""><div><p class="k">Founder</p><h3>Harshit Singh</h3><p>Harshit started digipartnersX to give brands one team for everything digital. Before it, he worked on retail analytics and a CRM platform at Tata Trent, and on data dashboards for the WageIndicator Foundation.</p></div></div>
+    <div class="contact"><p class="k" style="color:#A9B0D6">Start a project</p><h3>Tell us what your brand needs.</h3>
+      <dl><dt>Web</dt><dd>digipartnersx.vercel.app</dd><dt>Phone</dt><dd>+91 95035 60489 (WhatsApp)</dd><dt>Email</dt><dd>harshit.singh@flame.edu.in</dd><dt>Based in</dt><dd>Pune, India · working with clients everywhere</dd></dl></div>
+  </div>
+</section>
+</body>
+</html>
