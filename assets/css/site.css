@@ -694,8 +694,7 @@ h3 { font-family: var(--display); font-stretch: 86%; font-weight: 700; font-size
 .js .marquee .logos .logo { opacity: .82; animation: none; }
 .marquee .logo { flex: none; width: clamp(170px, 18vw, 240px); border-bottom: 0; }
 .marquee .logo:hover { opacity: 1; }
-.logo--vtp { font: 800 2rem/1 var(--display); letter-spacing: .08em; }
-.logo--rudra { font-weight: 600; letter-spacing: .04em; }
+.logo--chandrarang { font-weight: 700; letter-spacing: .03em; }
 .logo--karta { font-weight: 800; }
 @keyframes marquee { to { transform: translate3d(-50%, 0, 0); } }
 
